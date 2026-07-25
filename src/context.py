@@ -31,7 +31,7 @@ class RepositoryContext:
     status: str = "developing"
 
     engineering_object: str = "sensor development"
-    current_specification: str = "cryogenic quantum-sensor development"
+    current_specification: str = "microcalorimeter spectroscopy"
 
     object_sequence: tuple[str, ...] = DEFAULT_OBJECT_SEQUENCE
     engineering_paths: tuple[str, ...] = DEFAULT_ENGINEERING_PATHS
