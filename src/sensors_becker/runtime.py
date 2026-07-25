@@ -2,22 +2,14 @@
 
 from __future__ import annotations
 
-import subprocess
-import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Final
 
 from sensors_becker.context import RepositoryContext, default_context
 from sensors_becker.export import export_context_bundle
 from sensors_becker.figures import export_default_figures
 from sensors_becker.paths import RepositoryPaths, paths_for_root
 from sensors_becker.validation import validate_context
-
-
-REPOSITORY_URL: Final[str] = (
-    "https://github.com/thinkthoughts/sensors-becker.git"
-)
 
 
 @dataclass(slots=True)
@@ -38,52 +30,55 @@ class NotebookRuntime:
     def export_context(self) -> tuple[Path, Path]:
         """Export the current engineering context."""
 
-        paths = export_context_bundle(
+        exported_paths = export_context_bundle(
             self.context,
             directory=self.paths.exports,
         )
-        self._record(paths)
-        return paths
+        self._record(exported_paths)
+        return exported_paths
 
     def export_figures(self) -> tuple[Path, Path]:
         """Export the default engineering figures."""
 
-        paths = export_default_figures(
+        exported_paths = export_default_figures(
             self.context,
             directory=self.paths.figures,
         )
-        self._record(paths)
-        return paths
+        self._record(exported_paths)
+        return exported_paths
 
     def verify_outputs(self) -> tuple[Path, ...]:
-        """Verify recorded outputs exist and contain data."""
+        """Verify that recorded outputs exist and contain data."""
 
         for path in self.outputs:
             if not path.exists():
-                raise FileNotFoundError(f"Missing runtime output: {path}")
+                raise FileNotFoundError(
+                    f"Missing runtime output: {path}"
+                )
+
             if path.stat().st_size <= 0:
-                raise ValueError(f"Runtime output is empty: {path}")
+                raise ValueError(
+                    f"Runtime output is empty: {path}"
+                )
 
         return tuple(self.outputs)
 
     def relative_path(self, path: Path) -> Path:
         """Return a path relative to the runtime repository root."""
 
-        return path.resolve().relative_to(self.repository_root.resolve())
+        return path.resolve().relative_to(
+            self.repository_root.resolve()
+        )
 
     def _record(self, paths: tuple[Path, ...]) -> None:
+        """Record output paths once, preserving creation order."""
+
         for path in paths:
             if path not in self.outputs:
                 self.outputs.append(path)
 
 
-def _in_colab() -> bool:
-    """Return whether execution occurs in Google Colab."""
-
-    return "google.colab" in sys.modules
-
-
-def _find_repository_root(start: Path) -> Path:
+def find_repository_root(start: Path) -> Path:
     """Find a repository root containing pyproject.toml."""
 
     current = start.resolve()
@@ -97,65 +92,23 @@ def _find_repository_root(start: Path) -> Path:
     )
 
 
-def _prepare_colab_repository(
-    *,
-    repository_url: str,
-    destination: Path,
-) -> Path:
-    """Clone and install the repository in Google Colab."""
-
-    if not destination.exists():
-        subprocess.run(
-            [
-                "git",
-                "clone",
-                "--depth",
-                "1",
-                repository_url,
-                str(destination),
-            ],
-            check=True,
-        )
-
-    subprocess.run(
-        [
-            sys.executable,
-            "-m",
-            "pip",
-            "install",
-            "--quiet",
-            "--editable",
-            str(destination),
-        ],
-        check=True,
-    )
-
-    return destination.resolve()
-
-
 def initialize_notebook(
     *,
     start: Path | None = None,
     context: RepositoryContext | None = None,
-    repository_url: str = REPOSITORY_URL,
-    colab_destination: Path = Path("/content/sensors-becker"),
+    environment: str = "repository-runtime",
 ) -> NotebookRuntime:
-    """Initialize a validated notebook runtime.
+    """Initialize a validated engineering-notebook runtime.
 
-    In Google Colab, the public repository is cloned and installed.
-    In a local or VPS environment, the current repository is located
-    from ``start`` or the active working directory.
+    The package must already be installed or otherwise importable.
+
+    For Google Colab, run the notebook bootstrap cell first so the
+    repository package is installed before calling this function.
     """
 
-    if _in_colab():
-        repository_root = _prepare_colab_repository(
-            repository_url=repository_url,
-            destination=colab_destination,
-        )
-        environment = "google-colab"
-    else:
-        repository_root = _find_repository_root(start or Path.cwd())
-        environment = "repository-runtime"
+    repository_root = find_repository_root(
+        start or Path.cwd()
+    )
 
     paths = paths_for_root(repository_root)
     paths.ensure_runtime_directories()
@@ -173,6 +126,6 @@ def initialize_notebook(
 
 __all__ = [
     "NotebookRuntime",
-    "REPOSITORY_URL",
+    "find_repository_root",
     "initialize_notebook",
 ]
