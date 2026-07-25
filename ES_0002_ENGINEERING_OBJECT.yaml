@@ -1,0 +1,42 @@
+artifact_type: engineering_statement
+
+statement:
+  id: ES_0002
+  title: Engineering Object
+  repository: sensors-becker
+  status: developing
+
+engineering_object:
+  name: sensor development
+
+object_sequence:
+  - sensor development
+  - quantum sensing
+  - cryogenic sensing
+  - superconducting detectors
+  - transition-edge sensing
+  - microcalorimeter spectroscopy
+
+statement: >
+  Engineering objects develop through increasing specification.
+  Each specification supports additional engineering paths while
+  preserving the shared engineering object.
+
+relationships:
+  specifies:
+    - object_sequence
+
+  supports:
+    - engineering_paths
+
+references:
+  - RO_A_ENGINEERING_OBJECT_MAP.md
+  - ES_ENGINEERING_STATEMENTS.md
+
+development:
+  state: active
+  next:
+    - refine engineering paths
+    - identify measurable engineering constraints
+
+footer: Admissible generalizations trail leading specifications.
