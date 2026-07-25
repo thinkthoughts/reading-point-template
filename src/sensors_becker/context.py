@@ -59,9 +59,7 @@ class RepositoryContext:
         "refinements."
     )
 
-    footer: str = (
-        "Admissible generalizations trail leading specifications."
-    )
+    footer: str = "Admissible generalizations trail leading specifications."
 
     def as_dict(self) -> dict[str, object]:
         """Return the context as a serializable dictionary."""
@@ -77,12 +75,8 @@ class RepositoryContext:
             "measured_engineering_states": list(
                 self.measured_engineering_states
             ),
-            "engineering_constraints": list(
-                self.engineering_constraints
-            ),
-            "engineering_refinements": list(
-                self.engineering_refinements
-            ),
+            "engineering_constraints": list(self.engineering_constraints),
+            "engineering_refinements": list(self.engineering_refinements),
             "leading_specification": self.leading_specification,
             "footer": self.footer,
         }

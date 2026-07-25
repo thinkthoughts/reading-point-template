@@ -33,12 +33,7 @@ def save_figure(
 
     ensure_figure_directory(directory)
     path = directory / filename
-
-    figure.savefig(
-        path,
-        dpi=dpi,
-        bbox_inches="tight",
-    )
+    figure.savefig(path, dpi=dpi, bbox_inches="tight")
 
     if close:
         plt.close(figure)
@@ -58,7 +53,6 @@ def create_sequence_figure(
         raise ValueError("items must contain at least one entry")
 
     figure, axis = plt.subplots(figsize=figsize)
-
     axis.set_xlim(0.0, 1.0)
     axis.set_ylim(-0.5, len(items) - 0.5)
     axis.axis("off")
@@ -84,15 +78,11 @@ def create_sequence_figure(
 
         if index < len(items) - 1:
             next_y_position = y_positions[index + 1]
-
             axis.annotate(
                 "",
                 xy=(0.5, next_y_position + 0.25),
                 xytext=(0.5, y_position - 0.25),
-                arrowprops={
-                    "arrowstyle": "->",
-                    "linewidth": 1.2,
-                },
+                arrowprops={"arrowstyle": "->", "linewidth": 1.2},
             )
 
     figure.tight_layout()
@@ -105,7 +95,6 @@ def create_engineering_object_figure(
     """Create the repository engineering-object sequence figure."""
 
     validate_context(context)
-
     return create_sequence_figure(
         context.object_sequence,
         title="Engineering Object Sequence",
@@ -131,25 +120,12 @@ def create_engineering_cycle_figure(
     )
 
     graph = nx.DiGraph()
-
-    graph.add_edges_from(
-        zip(
-            nodes,
-            (*nodes[1:], nodes[0]),
-            strict=True,
-        )
-    )
+    graph.add_edges_from(zip(nodes, (*nodes[1:], nodes[0]), strict=True))
 
     figure, axis = plt.subplots(figsize=figsize)
-
     positions = nx.circular_layout(graph)
 
-    nx.draw_networkx_nodes(
-        graph,
-        positions,
-        ax=axis,
-        node_size=3200,
-    )
+    nx.draw_networkx_nodes(graph, positions, ax=axis, node_size=3200)
     nx.draw_networkx_edges(
         graph,
         positions,
@@ -170,7 +146,6 @@ def create_engineering_cycle_figure(
         pad=20,
     )
     axis.axis("off")
-
     figure.tight_layout()
     return figure
 

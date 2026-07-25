@@ -2,25 +2,18 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Final
 
-
-# Package and repository locations
 
 PACKAGE_DIR: Final[Path] = Path(__file__).resolve().parent
 SRC_DIR: Final[Path] = PACKAGE_DIR.parent
 REPOSITORY_ROOT: Final[Path] = SRC_DIR.parent
 
-
-# Repository files
-
 README_PATH: Final[Path] = REPOSITORY_ROOT / "README.md"
 REQUIREMENTS_PATH: Final[Path] = REPOSITORY_ROOT / "requirements.txt"
 PYPROJECT_PATH: Final[Path] = REPOSITORY_ROOT / "pyproject.toml"
-
-
-# Engineering artifact locations
 
 NOTEBOOKS_DIR: Final[Path] = REPOSITORY_ROOT / "notebooks"
 DATA_DIR: Final[Path] = REPOSITORY_ROOT / "data"
@@ -32,107 +25,126 @@ SESSION_REPORTS_DIR: Final[Path] = REPOSITORY_ROOT / "session_reports"
 ENGINEERING_REPORTS_DIR: Final[Path] = REPOSITORY_ROOT / "engineering_reports"
 
 
+@dataclass(frozen=True, slots=True)
+class RepositoryPaths:
+    """Resolved repository paths exposed to engineering notebooks."""
+
+    repository_root: Path
+    notebooks: Path
+    data: Path
+    outputs: Path
+    figures: Path
+    tables: Path
+    exports: Path
+    session_reports: Path
+    engineering_reports: Path
+
+    @classmethod
+    def from_root(cls, repository_root: Path) -> "RepositoryPaths":
+        """Create repository paths from a resolved repository root."""
+
+        root = repository_root.resolve()
+        outputs = root / "outputs"
+
+        return cls(
+            repository_root=root,
+            notebooks=root / "notebooks",
+            data=root / "data",
+            outputs=outputs,
+            figures=outputs / "figures",
+            tables=outputs / "tables",
+            exports=outputs / "exports",
+            session_reports=root / "session_reports",
+            engineering_reports=root / "engineering_reports",
+        )
+
+    def runtime_directories(self) -> tuple[Path, ...]:
+        """Return directories created for notebook execution."""
+
+        return (
+            self.notebooks,
+            self.data,
+            self.outputs,
+            self.figures,
+            self.tables,
+            self.exports,
+            self.session_reports,
+            self.engineering_reports,
+        )
+
+    def ensure_runtime_directories(self) -> tuple[Path, ...]:
+        """Create and return standard runtime directories."""
+
+        directories = self.runtime_directories()
+
+        for directory in directories:
+            directory.mkdir(parents=True, exist_ok=True)
+
+        return directories
+
+
+DEFAULT_PATHS: Final[RepositoryPaths] = RepositoryPaths.from_root(REPOSITORY_ROOT)
+
+
 def repository_path(*parts: str) -> Path:
-    """Return a path relative to the repository root."""
+    """Return a path relative to the installed repository root."""
 
     return REPOSITORY_ROOT.joinpath(*parts)
 
 
-def notebook_path(filename: str) -> Path:
-    """Return the path for a notebook filename."""
+def paths_for_root(repository_root: Path) -> RepositoryPaths:
+    """Return repository paths for an explicit repository root."""
 
-    return NOTEBOOKS_DIR / filename
-
-
-def data_path(filename: str) -> Path:
-    """Return the path for a repository data file."""
-
-    return DATA_DIR / filename
+    return RepositoryPaths.from_root(repository_root)
 
 
-def output_path(filename: str) -> Path:
-    """Return the path for a general notebook output."""
-
-    return OUTPUTS_DIR / filename
-
-
-def figure_path(filename: str) -> Path:
-    """Return the path for a generated figure."""
-
-    return FIGURES_DIR / filename
-
-
-def table_path(filename: str) -> Path:
-    """Return the path for a generated table."""
-
-    return TABLES_DIR / filename
-
-
-def export_path(filename: str) -> Path:
-    """Return the path for an exported repository artifact."""
-
-    return EXPORTS_DIR / filename
-
-
-def reading_order_paths() -> tuple[Path, ...]:
+def reading_order_paths(
+    repository_root: Path = REPOSITORY_ROOT,
+) -> tuple[Path, ...]:
     """Return Reading Order documents in filename order."""
 
-    return tuple(sorted(REPOSITORY_ROOT.glob("RO_*.md")))
+    return tuple(sorted(repository_root.glob("RO_*.md")))
 
 
-def engineering_statement_paths() -> tuple[Path, ...]:
+def engineering_statement_paths(
+    repository_root: Path = REPOSITORY_ROOT,
+) -> tuple[Path, ...]:
     """Return Engineering Statement files in filename order."""
 
-    markdown_paths = REPOSITORY_ROOT.glob("ES_*.md")
-    yaml_paths = REPOSITORY_ROOT.glob("ES_*.yaml")
-    yml_paths = REPOSITORY_ROOT.glob("ES_*.yml")
-
-    return tuple(sorted((*markdown_paths, *yaml_paths, *yml_paths)))
+    paths = (
+        *repository_root.glob("ES_*.md"),
+        *repository_root.glob("ES_*.yaml"),
+        *repository_root.glob("ES_*.yml"),
+    )
+    return tuple(sorted(paths))
 
 
 def ensure_runtime_directories() -> tuple[Path, ...]:
-    """Create and return the standard runtime directories."""
+    """Create standard directories for the installed repository."""
 
-    directories = (
-        NOTEBOOKS_DIR,
-        DATA_DIR,
-        OUTPUTS_DIR,
-        FIGURES_DIR,
-        TABLES_DIR,
-        EXPORTS_DIR,
-        SESSION_REPORTS_DIR,
-        ENGINEERING_REPORTS_DIR,
-    )
-
-    for directory in directories:
-        directory.mkdir(parents=True, exist_ok=True)
-
-    return directories
+    return DEFAULT_PATHS.ensure_runtime_directories()
 
 
 __all__ = [
-    "PACKAGE_DIR",
-    "SRC_DIR",
-    "REPOSITORY_ROOT",
-    "README_PATH",
-    "REQUIREMENTS_PATH",
-    "PYPROJECT_PATH",
-    "NOTEBOOKS_DIR",
     "DATA_DIR",
-    "OUTPUTS_DIR",
-    "FIGURES_DIR",
-    "TABLES_DIR",
-    "EXPORTS_DIR",
-    "SESSION_REPORTS_DIR",
+    "DEFAULT_PATHS",
     "ENGINEERING_REPORTS_DIR",
-    "repository_path",
-    "notebook_path",
-    "data_path",
-    "output_path",
-    "figure_path",
-    "table_path",
-    "export_path",
-    "reading_order_paths",
+    "EXPORTS_DIR",
+    "FIGURES_DIR",
+    "NOTEBOOKS_DIR",
+    "OUTPUTS_DIR",
+    "PACKAGE_DIR",
+    "PYPROJECT_PATH",
+    "README_PATH",
+    "REPOSITORY_ROOT",
+    "REQUIREMENTS_PATH",
+    "RepositoryPaths",
+    "SESSION_REPORTS_DIR",
+    "SRC_DIR",
+    "TABLES_DIR",
     "engineering_statement_paths",
     "ensure_runtime_directories",
+    "paths_for_root",
+    "reading_order_paths",
+    "repository_path",
 ]

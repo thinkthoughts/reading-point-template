@@ -27,12 +27,7 @@ def context_to_dict(context: RepositoryContext) -> dict[str, object]:
     return context.as_dict()
 
 
-def write_json(
-    data: Any,
-    path: Path,
-    *,
-    indent: int = 2,
-) -> Path:
+def write_json(data: Any, path: Path, *, indent: int = 2) -> Path:
     """Write JSON data to a file and return the resulting path."""
 
     ensure_parent_directory(path)
@@ -50,10 +45,7 @@ def write_json(
     return path
 
 
-def write_yaml(
-    data: Any,
-    path: Path,
-) -> Path:
+def write_yaml(data: Any, path: Path) -> Path:
     """Write YAML data to a file and return the resulting path."""
 
     ensure_parent_directory(path)
@@ -78,10 +70,7 @@ def export_context_json(
 ) -> Path:
     """Export an engineering context as JSON."""
 
-    return write_json(
-        context_to_dict(context),
-        directory / filename,
-    )
+    return write_json(context_to_dict(context), directory / filename)
 
 
 def export_context_yaml(
@@ -92,10 +81,7 @@ def export_context_yaml(
 ) -> Path:
     """Export an engineering context as YAML."""
 
-    return write_yaml(
-        context_to_dict(context),
-        directory / filename,
-    )
+    return write_yaml(context_to_dict(context), directory / filename)
 
 
 def export_context_bundle(
@@ -116,7 +102,6 @@ def export_context_bundle(
         filename=f"{stem}.yaml",
         directory=directory,
     )
-
     return json_path, yaml_path
 
 
