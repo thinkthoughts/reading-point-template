@@ -1,5 +1,3 @@
-# ES_0003_ENGINEERING_PATHS.yaml
-
 artifact_type: engineering_statement
 
 statement:
@@ -9,27 +7,31 @@ statement:
   status: developing
   initiated: 2026-07
 
+statement_text: >
+  Engineering paths develop from a shared engineering object.
+  Hardware, software, and experimental engineering support the
+  engineering system through measured engineering states,
+  engineering constraints, and engineering refinements.
+
 engineering_object:
   name: microcalorimeter spectroscopy
-
-statement: >
-  Engineering paths develop from a shared engineering object.
-  Additional leading specifications support refinement across
-  engineering paths.
 
 engineering_paths:
 
   hardware_engineering:
-    purpose: Develop physical sensing systems.
+    purpose: >
+      Develop physical sensing systems.
 
   software_engineering:
-    purpose: Develop computational sensing systems.
+    purpose: >
+      Develop computational sensing systems.
 
   experimental_engineering:
-    purpose: Connect hardware and software through measurable
+    purpose: >
+      Connect hardware and software through measured
       engineering activities.
 
-relationships:
+engineering_relationships:
 
   develops:
     - hardware_engineering
@@ -40,21 +42,32 @@ relationships:
     - engineering_object
 
   supports:
+    - engineering_system
+    - measured_engineering_states
+    - engineering_constraints
+    - engineering_refinements
     - leading_specifications
-
-references:
-  - ES_ENGINEERING_STATEMENTS.md
-  - RO_A_ENGINEERING_OBJECT_MAP.md
-  - RO_B_ENGINEERING_PATHS.md
 
 development:
 
   current:
     - identify engineering paths
-    - identify engineering relationships
+    - specify engineering relationships
 
   next:
-    - specify engineering constraints
-    - specify measurable engineering activities
+    - specify engineering system
+    - identify measured engineering states
+    - identify engineering constraints
+    - identify engineering refinements
+
+references:
+  - ES_0000_ENGINEERING_STATEMENTS.md
+
+  - RO_B_ENGINEERING_OBJECT_MAP.md
+  - RO_C_ENGINEERING_PATHS.md
+  - RO_E_ENGINEERING_SYSTEM_MAP.md
+  - RO_F_MEASURED_ENGINEERING_STATES.md
+  - RO_G_ENGINEERING_CONSTRAINTS.md
+  - RO_H_ENGINEERING_REFINEMENTS.md
 
 footer: Admissible generalizations trail leading specifications.
