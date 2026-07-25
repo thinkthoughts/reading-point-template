@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/sensors_becker/__init__.py
+src/sensors_becker/context.py
+src/sensors_becker/export.py
+src/sensors_becker/figures.py
+src/sensors_becker/paths.py
+src/sensors_becker/validation.py
+src/sensors_becker.egg-info/PKG-INFO
+src/sensors_becker.egg-info/SOURCES.txt
+src/sensors_becker.egg-info/dependency_links.txt
+src/sensors_becker.egg-info/requires.txt
+src/sensors_becker.egg-info/top_level.txt
+tests/test_context.py
