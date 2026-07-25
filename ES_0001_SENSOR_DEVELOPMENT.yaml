@@ -1,29 +1,57 @@
 artifact_type: engineering_statement
-statement_id: ES_0001
-repository: sensors-becker
 
-engineering_object: sensor development
+statement:
+  id: ES_0001
+  title: Sensor Development
+  repository: sensors-becker
+  status: developing
+  initiated: 2026-07
+
+engineering_object:
+  name: sensor development
+  current_specification: cryogenic quantum-sensor development
 
 specified_domain:
-  - quantum sensing
-  - cryogenic sensing
-  - superconducting detectors
-  - transition-edge sensing
-  - microcalorimeter spectroscopy
+  sequence:
+    - sensor development
+    - quantum sensing
+    - cryogenic sensing
+    - superconducting detectors
+    - transition-edge sensing
+    - microcalorimeter spectroscopy
 
 engineering_paths:
   - hardware engineering
   - software engineering
   - experimental engineering
 
-current_context:
-  collaborator: Daniel Becker
-  initiated: 2026-07
-  state: initial specification
-
-leading_statement: >
+leading_specification: >
   Cryogenic quantum-sensor development connects hardware,
   software, and experimental engineering through measurable
   sensor performance.
 
-status: developing
+repository_context:
+  purpose: >
+    Identify leading specifications for sensor development
+    related to the work of Daniel Becker.
+  collaboration_stage: initial engineering preparation
+  context_date: 2026-07
+
+development_state:
+  specified:
+    - engineering object
+    - sensor-domain sequence
+    - initial engineering paths
+  continuing:
+    - sensor-system details
+    - current development constraints
+    - candidate hardware refinements
+    - candidate software refinements
+    - candidate experimental refinements
+
+source_documents:
+  - RO_A_ENGINEERING_OBJECT_MAP.md
+  - RO_B_ENGINEERING_PATHS.md
+  - RO_C_REPOSITORY_CONTEXT.md
+
+footer: Admissible generalizations trail leading specifications.
