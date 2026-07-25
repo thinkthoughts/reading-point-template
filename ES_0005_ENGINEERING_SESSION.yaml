@@ -1,0 +1,115 @@
+artifact_type: engineering_statement
+
+statement:
+  id: ES_0005
+  title: Engineering Session
+  repository: sensors-becker
+  status: developing
+  initiated: 2026-07
+
+statement_text: >
+  Engineering sessions develop repository understanding through
+  focused questions, technical observations, leading specifications,
+  and specified next steps.
+
+engineering_object:
+  name: cryogenic quantum-sensor development
+  current_specification: microcalorimeter spectroscopy
+
+session:
+  type: initial repository engineering
+  context: >
+    Develop an initial engineering scaffold related to the sensor
+    research and development work of Daniel Becker.
+
+  current_focus:
+    - specify the engineering object
+    - map connected engineering paths
+    - establish initial leading specifications
+    - identify information required for further development
+    - prepare technically informed collaboration
+
+session_inputs:
+  - seminar contact
+  - publicly available research context
+  - engineering object map
+  - engineering paths
+  - repository context
+  - existing engineering statements
+
+session_questions:
+  - question: >
+      Which sensor system currently provides the most relevant
+      engineering object for continued development?
+    state: open
+
+  - question: >
+      Which hardware, software, and experimental constraints currently
+      shape sensor performance?
+    state: open
+
+  - question: >
+      Which measurable states support comparison between current
+      performance and candidate refinements?
+    state: open
+
+  - question: >
+      Which engineering contribution could complement Daniel Becker's
+      existing expertise, equipment, and development practices?
+    state: open
+
+session_outputs:
+  specified:
+    - repository identity layer
+    - engineering object sequence
+    - initial engineering paths
+    - initial leading specifications
+    - Engineering Statement artifact convention
+
+  developing:
+    - sensor system map
+    - measurable sensor states
+    - current engineering constraints
+    - candidate refinements
+    - collaboration questions
+    - next engineering session
+
+engineering_relationships:
+  develops:
+    - repository understanding
+    - leading specifications
+    - engineering questions
+    - specified next steps
+
+  connects:
+    - technical context
+    - engineering objects
+    - engineering paths
+    - measurable states
+    - collaboration opportunities
+
+  supports:
+    - continued repository development
+    - future engineering statements
+    - engineering notebooks
+    - session reports
+
+next_steps:
+  - create the repository reading-order index
+  - refine the repository README
+  - specify the sensor system map
+  - identify measurable sensor states
+  - prepare initial collaboration questions
+  - initialize Notebook 00 after the document scaffold stabilizes
+
+references:
+  - ES_ENGINEERING_STATEMENTS.md
+  - ES_0001_SENSOR_DEVELOPMENT.yaml
+  - ES_0002_ENGINEERING_OBJECT.yaml
+  - ES_0003_ENGINEERING_PATHS.yaml
+  - ES_0004_LEADING_SPECIFICATIONS.yaml
+  - RO_A_ENGINEERING_OBJECT_MAP.md
+  - RO_B_ENGINEERING_PATHS.md
+  - RO_C_REPOSITORY_CONTEXT.md
+
+footer: Admissible generalizations trail leading specifications.
