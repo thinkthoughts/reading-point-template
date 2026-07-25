@@ -7,7 +7,7 @@ name = "sensors-becker"
 version = "0.1.0"
 description = "Leading specifications for cryogenic quantum-sensor development in preparation for collaboration with Daniel Becker."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 
 authors = [
@@ -43,7 +43,7 @@ pythonpath = ["src"]
 
 [tool.ruff]
 line-length = 88
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
