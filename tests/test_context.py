@@ -1,211 +1,108 @@
-"""Figure utilities for the sensors-becker package."""
+"""Tests for the sensors-becker engineering context."""
 
 from __future__ import annotations
 
-from collections.abc import Sequence
-from pathlib import Path
+import json
 
-import matplotlib.pyplot as plt
-import networkx as nx
-from matplotlib.figure import Figure
+import yaml
 
-from sensors_becker.context import RepositoryContext
-from sensors_becker.paths import FIGURES_DIR
-from sensors_becker.validation import validate_context
-
-
-def ensure_figure_directory(directory: Path = FIGURES_DIR) -> Path:
-    """Create and return the figure output directory."""
-
-    directory.mkdir(parents=True, exist_ok=True)
-    return directory
+from sensors_becker.context import RepositoryContext, default_context
+from sensors_becker.export import export_context_bundle
+from sensors_becker.figures import export_default_figures
+from sensors_becker.validation import (
+    ContextValidationError,
+    validate_context,
+)
 
 
-def save_figure(
-    figure: Figure,
-    filename: str,
-    *,
-    directory: Path = FIGURES_DIR,
-    dpi: int = 200,
-    close: bool = False,
-) -> Path:
-    """Save a Matplotlib figure and return the resulting path."""
+def test_default_context_validates() -> None:
+    """The default repository context should pass validation."""
 
-    ensure_figure_directory(directory)
-    path = directory / filename
-
-    figure.savefig(
-        path,
-        dpi=dpi,
-        bbox_inches="tight",
-    )
-
-    if close:
-        plt.close(figure)
-
-    return path
-
-
-def create_sequence_figure(
-    items: Sequence[str],
-    *,
-    title: str,
-    figsize: tuple[float, float] = (8.0, 8.0),
-) -> Figure:
-    """Create a vertical sequence figure from ordered text items."""
-
-    if not items:
-        raise ValueError("items must contain at least one entry")
-
-    figure, axis = plt.subplots(figsize=figsize)
-
-    axis.set_xlim(0.0, 1.0)
-    axis.set_ylim(-0.5, len(items) - 0.5)
-    axis.axis("off")
-    axis.set_title(title, pad=20)
-
-    y_positions = list(reversed(range(len(items))))
-
-    for index, (item, y_position) in enumerate(
-        zip(items, y_positions, strict=True)
-    ):
-        axis.text(
-            0.5,
-            y_position,
-            item,
-            ha="center",
-            va="center",
-            bbox={
-                "boxstyle": "round,pad=0.5",
-                "facecolor": "white",
-                "edgecolor": "black",
-            },
-        )
-
-        if index < len(items) - 1:
-            next_y_position = y_positions[index + 1]
-
-            axis.annotate(
-                "",
-                xy=(0.5, next_y_position + 0.25),
-                xytext=(0.5, y_position - 0.25),
-                arrowprops={
-                    "arrowstyle": "->",
-                    "linewidth": 1.2,
-                },
-            )
-
-    figure.tight_layout()
-    return figure
-
-
-def create_engineering_object_figure(
-    context: RepositoryContext,
-) -> Figure:
-    """Create the repository engineering-object sequence figure."""
+    context = default_context()
 
     validate_context(context)
 
-    return create_sequence_figure(
-        context.object_sequence,
-        title="Engineering Object Sequence",
+
+def test_default_context_identity() -> None:
+    """The default context should preserve repository identity."""
+
+    context = default_context()
+
+    assert context.repository == "sensors-becker"
+    assert context.engineering_object == "sensor development"
+    assert context.current_specification == "microcalorimeter spectroscopy"
+
+
+def test_object_sequence_relationships() -> None:
+    """The object sequence should contain its broad and current objects."""
+
+    context = default_context()
+
+    assert context.object_sequence[0] == context.engineering_object
+    assert context.current_specification in context.object_sequence
+
+
+def test_context_as_dict_is_serializable() -> None:
+    """The context dictionary should support JSON serialization."""
+
+    context = default_context()
+    data = context.as_dict()
+
+    encoded = json.dumps(data)
+
+    assert encoded
+    assert data["repository"] == "sensors-becker"
+    assert isinstance(data["object_sequence"], list)
+
+
+def test_invalid_current_specification_fails() -> None:
+    """A current specification outside the object sequence should fail."""
+
+    context = RepositoryContext(
+        current_specification="unsupported sensor specification"
     )
 
-
-def create_engineering_cycle_figure(
-    context: RepositoryContext,
-    *,
-    figsize: tuple[float, float] = (9.0, 7.0),
-) -> Figure:
-    """Create a directed graph of the engineering development cycle."""
-
-    validate_context(context)
-
-    nodes = (
-        "Engineering object",
-        "Engineering system",
-        "Measured engineering states",
-        "Engineering constraints",
-        "Engineering refinements",
-        "Leading specifications",
-    )
-
-    graph = nx.DiGraph()
-
-    graph.add_edges_from(
-        zip(
-            nodes,
-            (*nodes[1:], nodes[0]),
-            strict=True,
+    try:
+        validate_context(context)
+    except ContextValidationError as error:
+        assert "current_specification" in str(error)
+    else:
+        raise AssertionError(
+            "validate_context should reject an unsupported specification"
         )
+
+
+def test_context_bundle_exports_json_and_yaml(tmp_path) -> None:
+    """The context bundle should export matching JSON and YAML files."""
+
+    context = default_context()
+
+    json_path, yaml_path = export_context_bundle(
+        context,
+        directory=tmp_path,
     )
 
-    figure, axis = plt.subplots(figsize=figsize)
+    assert json_path.exists()
+    assert yaml_path.exists()
 
-    positions = nx.circular_layout(graph)
+    json_data = json.loads(json_path.read_text(encoding="utf-8"))
+    yaml_data = yaml.safe_load(yaml_path.read_text(encoding="utf-8"))
 
-    nx.draw_networkx_nodes(
-        graph,
-        positions,
-        ax=axis,
-        node_size=3200,
-    )
-    nx.draw_networkx_edges(
-        graph,
-        positions,
-        ax=axis,
-        arrows=True,
-        arrowsize=20,
-        width=1.5,
-    )
-    nx.draw_networkx_labels(
-        graph,
-        positions,
-        ax=axis,
-        font_size=9,
+    assert json_data == yaml_data
+    assert json_data["repository"] == "sensors-becker"
+
+
+def test_default_figures_export(tmp_path) -> None:
+    """The default engineering figures should export successfully."""
+
+    context = default_context()
+
+    object_path, cycle_path = export_default_figures(
+        context,
+        directory=tmp_path,
     )
 
-    axis.set_title(
-        f"{context.repository}: Engineering Development Cycle",
-        pad=20,
-    )
-    axis.axis("off")
-
-    figure.tight_layout()
-    return figure
-
-
-def export_default_figures(
-    context: RepositoryContext,
-    *,
-    directory: Path = FIGURES_DIR,
-) -> tuple[Path, Path]:
-    """Create and export the default Notebook 00 figures."""
-
-    object_figure = create_engineering_object_figure(context)
-    cycle_figure = create_engineering_cycle_figure(context)
-
-    object_path = save_figure(
-        object_figure,
-        "engineering_object_sequence.png",
-        directory=directory,
-        close=True,
-    )
-    cycle_path = save_figure(
-        cycle_figure,
-        "engineering_development_cycle.png",
-        directory=directory,
-        close=True,
-    )
-
-    return object_path, cycle_path
-
-
-__all__ = [
-    "create_engineering_cycle_figure",
-    "create_engineering_object_figure",
-    "create_sequence_figure",
-    "ensure_figure_directory",
-    "export_default_figures",
-    "save_figure",
-]
+    assert object_path.exists()
+    assert cycle_path.exists()
+    assert object_path.stat().st_size > 0
+    assert cycle_path.stat().st_size > 0
