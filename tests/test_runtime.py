@@ -9,7 +9,7 @@ def test_initialize_notebook(tmp_path) -> None:
     """A repository runtime should initialize from an explicit root."""
 
     (tmp_path / "pyproject.toml").write_text(
-        "[project]\nname = \"runtime-test\"\nversion = \"0.0.0\"\n",
+        '[project]\nname = "runtime-test"\nversion = "0.0.0"\n',
         encoding="utf-8",
     )
 
@@ -27,7 +27,7 @@ def test_runtime_exports_and_verifies(tmp_path) -> None:
     """Runtime exports should be recorded and verified."""
 
     (tmp_path / "pyproject.toml").write_text(
-        "[project]\nname = \"runtime-test\"\nversion = \"0.0.0\"\n",
+        '[project]\nname = "runtime-test"\nversion = "0.0.0"\n',
         encoding="utf-8",
     )
 
@@ -35,6 +35,6 @@ def test_runtime_exports_and_verifies(tmp_path) -> None:
 
     context_paths = runtime.export_context()
     figure_paths = runtime.export_figures()
-    verified = runtime.verify_outputs()
+    verified_paths = runtime.verify_outputs()
 
-    assert verified == (*context_paths, *figure_paths)
+    assert verified_paths == (*context_paths, *figure_paths)
