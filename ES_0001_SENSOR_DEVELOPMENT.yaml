@@ -1,0 +1,29 @@
+artifact_type: engineering_statement
+statement_id: ES_0001
+repository: sensors-becker
+
+engineering_object: sensor development
+
+specified_domain:
+  - quantum sensing
+  - cryogenic sensing
+  - superconducting detectors
+  - transition-edge sensing
+  - microcalorimeter spectroscopy
+
+engineering_paths:
+  - hardware engineering
+  - software engineering
+  - experimental engineering
+
+current_context:
+  collaborator: Daniel Becker
+  initiated: 2026-07
+  state: initial specification
+
+leading_statement: >
+  Cryogenic quantum-sensor development connects hardware,
+  software, and experimental engineering through measurable
+  sensor performance.
+
+status: developing
