@@ -1,74 +1,125 @@
-This might even let the README become extremely small (but we want it to be enticing to continue, not just a TOC within the REPO scaffolding).
+# sensors-becker
 
-README
+This engineering repository identifies leading specifications for cryogenic quantum-sensor development in preparation for collaboration with Daniel Becker (July 2026).
 
-Purpose
+## Engineering Purpose
 
-Reading Order
+This repository develops engineering understanding through continued specification.
 
-Repository Structure
+Current engineering development emphasizes:
 
-# README
+- engineering objects
+- engineering paths
+- leading specifications
+- engineering sessions
+- continued engineering refinement
 
-This engineering repository (sensors-becker) identifies leading specifications for sensor development as addressed by Daniel Becker (July 2026).
+Repository development begins with engineering understanding before implementation.
 
-#
+## Engineering Audience
 
-Specified audience
+Primary engineering audience:
 
-Daniel Becker
+- Daniel Becker
 
-Context
+Additional engineering audiences may develop through continued collaboration.
 
+## Engineering Context
+
+Current engineering context develops through increasing specification.
+
+```text
 Sensor development
+        │
+        ▼
+Quantum sensing
+        │
+        ▼
+Cryogenic sensing
+        │
+        ▼
+Superconducting detectors
+        │
+        ▼
+Transition-edge sensing
+        │
+        ▼
+Microcalorimeter spectroscopy
+```
 
-Referenced in
+Additional engineering context develops through continued specification.
 
-...
+## Engineering Objective
 
-Objective
+Develop engineering understanding that supports technically meaningful collaboration through leading specifications.
 
-...
+Current engineering work emphasizes:
 
-Engineering objective
+- engineering object specification
+- engineering path specification
+- measurable engineering questions
+- candidate engineering refinements
+- continued engineering development
 
-...
-# README (DEV NOTES for next version):
+## Engineering Reading Order
 
-RO in the repo scaffolding is short for READING_ORDER
+Repository comprehension develops through the Reading Order.
 
-This engineering repository (sensors-becker) identifies leading specifications for sensor development as addressed by Daniel Becker (July 2026).
+**A — Reading Order**  
+`RO_A_READING_ORDER.md`
 
-#
+**B — Engineering Object Map**  
+`RO_B_ENGINEERING_OBJECT_MAP.md`
 
-Specified audience
+**C — Engineering Paths**  
+`RO_C_ENGINEERING_PATHS.md`
 
-Daniel Becker
+**D — Repository Context**  
+`RO_D_REPOSITORY_CONTEXT.md`
 
-Context
+**E — Engineering Statements**  
+`ES_ENGINEERING_STATEMENTS.md`
 
-Sensor development
+**F — Notebook 00**  
+`NB_00_ENGINEERING_CONTEXT.ipynb`
 
-Referenced in
+**G — Session Reports**
 
-...
+Reading Order documents support repository comprehension.
 
-Objective
+## Repository Structure
 
-...
+Current engineering artifact types include:
 
-Engineering objective
+| Artifact | Purpose |
+|----------|---------|
+| **RO** | Reading Order |
+| **ES** | Engineering Statement |
+| **NB** | Notebook |
+| **SR** | Session Report |
+| **ER** | Engineering Report |
 
-...
+Additional engineering artifacts develop through continued repository engineering.
 
-# Contact
+## Current Repository Status
 
-Dan Hawkley
+Current repository development includes:
 
-Text: 303.898.3295
+- repository identity
+- engineering reading order
+- Engineering Statement specification
+- initial Engineering Statements
 
-# Contact
+Current engineering work supports continued specification before implementation.
 
-Dan Hawkley
+## Contact
 
-Text: 303.898.3295
+**Dan Hawkley**
+
+Text: **303.898.3295**
+
+---
+
+*Engineering repositories develop through specification.*
+
+*Admissible generalizations trail leading specifications.*
