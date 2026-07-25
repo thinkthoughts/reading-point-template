@@ -1,0 +1,96 @@
+artifact_type: engineering_statement
+
+statement:
+  id: ES_0004
+  title: Leading Specifications
+  repository: sensors-becker
+  status: developing
+  initiated: 2026-07
+
+engineering_object:
+  name: cryogenic quantum-sensor development
+  current_specification: microcalorimeter spectroscopy
+
+statement_text: >
+  Leading specifications connect engineering objects,
+  engineering paths, measurable states, and continued refinement.
+
+leading_specifications:
+
+  shared_engineering_object:
+    specification: >
+      Hardware, software, and experimental engineering develop
+      from the shared engineering object.
+
+  measurable_sensor_performance:
+    specification: >
+      Sensor development advances through measurable performance
+      states supported by specified hardware, software, and
+      experimental conditions.
+
+  connected_engineering_paths:
+    specification: >
+      Refinements within one engineering path may support
+      refinements across additional engineering paths.
+
+  continued_specification:
+    specification: >
+      Current leading specifications support additional
+      engineering questions, measurements, and development steps.
+
+engineering_relationships:
+
+  connects:
+    - engineering_objects
+    - engineering_paths
+    - measurable_states
+
+  constrains:
+    - candidate_refinements
+    - supported_generalizations
+
+  supports:
+    - hardware_engineering
+    - software_engineering
+    - experimental_engineering
+    - continued_engineering_development
+
+current_specification_state:
+
+  specified:
+    - shared engineering object
+    - object sequence
+    - hardware engineering path
+    - software engineering path
+    - experimental engineering path
+    - initial leading specifications
+
+  continuing:
+    - measurable sensor states
+    - current performance constraints
+    - candidate hardware refinements
+    - candidate software refinements
+    - candidate experimental refinements
+    - collaboration opportunities
+
+references:
+  - ES_ENGINEERING_STATEMENTS.md
+  - ES_0001_SENSOR_DEVELOPMENT.yaml
+  - ES_0002_ENGINEERING_OBJECT.yaml
+  - ES_0003_ENGINEERING_PATHS.yaml
+  - RO_A_ENGINEERING_OBJECT_MAP.md
+  - RO_B_ENGINEERING_PATHS.md
+
+development:
+
+  current:
+    - identify initial leading specifications
+    - connect engineering paths
+    - prepare measurable engineering questions
+
+  next:
+    - specify measurable sensor states
+    - identify current engineering constraints
+    - develop candidate refinements
+
+footer: Admissible generalizations trail leading specifications.
