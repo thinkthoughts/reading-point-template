@@ -1,0 +1,30 @@
+# Core notebook environment
+
+jupyter
+ipykernel
+
+# Data
+
+numpy
+pandas
+
+# Engineering statements
+
+pyyaml
+jsonschema
+
+# Figures
+
+matplotlib
+
+# Graphs
+
+networkx
+
+# Export
+
+tabulate
+
+# Progress
+
+tqdm
