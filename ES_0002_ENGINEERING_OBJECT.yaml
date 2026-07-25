@@ -5,9 +5,17 @@ statement:
   title: Engineering Object
   repository: sensors-becker
   status: developing
+  initiated: 2026-07
+
+statement_text: >
+  Engineering objects develop through increasing specification.
+  Object sequences support engineering systems, engineering paths,
+  measured engineering states, engineering constraints, and
+  engineering refinements.
 
 engineering_object:
   name: sensor development
+  current_specification: cryogenic quantum-sensor development
 
 object_sequence:
   - sensor development
@@ -17,26 +25,39 @@ object_sequence:
   - transition-edge sensing
   - microcalorimeter spectroscopy
 
-statement: >
-  Engineering objects develop through increasing specification.
-  Each specification supports additional engineering paths while
-  preserving the shared engineering object.
+engineering_relationships:
 
-relationships:
   specifies:
     - object_sequence
 
+  develops:
+    - engineering_system
+
   supports:
     - engineering_paths
-
-references:
-  - RO_A_ENGINEERING_OBJECT_MAP.md
-  - ES_ENGINEERING_STATEMENTS.md
+    - measured_engineering_states
+    - engineering_constraints
+    - engineering_refinements
 
 development:
-  state: active
+
+  current:
+    - specify engineering object
+    - refine object sequence
+
   next:
-    - refine engineering paths
-    - identify measurable engineering constraints
+    - specify engineering system
+    - identify measured engineering states
+    - identify engineering constraints
+
+references:
+  - ES_0000_ENGINEERING_STATEMENTS.md
+
+  - RO_B_ENGINEERING_OBJECT_MAP.md
+  - RO_C_ENGINEERING_PATHS.md
+  - RO_E_ENGINEERING_SYSTEM_MAP.md
+  - RO_F_MEASURED_ENGINEERING_STATES.md
+  - RO_G_ENGINEERING_CONSTRAINTS.md
+  - RO_H_ENGINEERING_REFINEMENTS.md
 
 footer: Admissible generalizations trail leading specifications.
