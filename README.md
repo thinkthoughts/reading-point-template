@@ -1,3 +1,13 @@
+This might even let the README become extremely small (but we want it to be enticing to continue, not just a TOC within the REPO scaffolding).
+
+README
+
+Purpose
+
+Reading Order
+
+Repository Structure
+
 # README
 
 This engineering repository (sensors-becker) identifies leading specifications for sensor development as addressed by Daniel Becker (July 2026).
