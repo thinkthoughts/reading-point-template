@@ -8,108 +8,130 @@ statement:
   initiated: 2026-07
 
 statement_text: >
-  Engineering sessions develop repository understanding through
-  focused questions, technical observations, leading specifications,
-  and specified next steps.
+  Engineering sessions develop engineering understanding through
+  focused engineering questions, technical observations,
+  leading specifications, and specified next steps.
 
 engineering_object:
   name: cryogenic quantum-sensor development
   current_specification: microcalorimeter spectroscopy
 
-session:
+engineering_session:
+
   type: initial repository engineering
+
   context: >
-    Develop an initial engineering scaffold related to the sensor
-    research and development work of Daniel Becker.
+    Develop an initial engineering scaffold related to
+    cryogenic quantum-sensor development.
 
   current_focus:
     - specify the engineering object
-    - map connected engineering paths
-    - establish initial leading specifications
-    - identify information required for further development
-    - prepare technically informed collaboration
+    - specify the engineering system
+    - identify measured engineering states
+    - identify engineering constraints
+    - identify engineering refinements
+    - prepare technically meaningful collaboration
 
 session_inputs:
-  - seminar contact
+
+  - seminar discussions
   - publicly available research context
   - engineering object map
-  - engineering paths
-  - repository context
-  - existing engineering statements
+  - engineering system map
+  - measured engineering states
+  - engineering constraints
+  - engineering refinements
+  - Engineering Statements
 
-session_questions:
+engineering_questions:
+
   - question: >
-      Which sensor system currently provides the most relevant
-      engineering object for continued development?
+      Which engineering system currently provides the
+      greatest opportunity for continued specification?
     state: open
 
   - question: >
-      Which hardware, software, and experimental constraints currently
-      shape sensor performance?
+      Which measured engineering states currently constrain
+      engineering development?
     state: open
 
   - question: >
-      Which measurable states support comparison between current
-      performance and candidate refinements?
+      Which engineering refinements could most effectively
+      improve those measured engineering states?
     state: open
 
   - question: >
-      Which engineering contribution could complement Daniel Becker's
-      existing expertise, equipment, and development practices?
+      Which engineering contribution could complement
+      Daniel Becker's existing expertise and laboratory
+      capabilities?
     state: open
 
-session_outputs:
+engineering_outputs:
+
   specified:
-    - repository identity layer
-    - engineering object sequence
-    - initial engineering paths
-    - initial leading specifications
-    - Engineering Statement artifact convention
+    - repository identity
+    - engineering object
+    - engineering paths
+    - engineering system
+    - measured engineering states
+    - engineering constraints
+    - engineering refinements
+    - Engineering Statement convention
 
   developing:
-    - sensor system map
-    - measurable sensor states
-    - current engineering constraints
-    - candidate refinements
-    - collaboration questions
-    - next engineering session
+    - engineering priorities
+    - Notebook 00
+    - engineering session reports
+    - engineering reports
+    - collaboration opportunities
 
 engineering_relationships:
+
   develops:
-    - repository understanding
+    - engineering understanding
     - leading specifications
     - engineering questions
     - specified next steps
 
   connects:
-    - technical context
     - engineering objects
+    - engineering systems
     - engineering paths
-    - measurable states
-    - collaboration opportunities
+    - measured engineering states
+    - engineering constraints
+    - engineering refinements
 
   supports:
     - continued repository development
-    - future engineering statements
+    - Engineering Statements
     - engineering notebooks
     - session reports
+    - engineering reports
 
-next_steps:
-  - create the repository reading-order index
-  - refine the repository README
-  - specify the sensor system map
-  - identify measurable sensor states
-  - prepare initial collaboration questions
-  - initialize Notebook 00 after the document scaffold stabilizes
+development:
+
+  current:
+    - complete repository specification layer
+    - prepare Notebook 00
+
+  next:
+    - initialize Notebook 00
+    - conduct engineering sessions
+    - develop engineering reports
 
 references:
-  - ES_ENGINEERING_STATEMENTS.md
+  - ES_0000_ENGINEERING_STATEMENTS.md
   - ES_0001_SENSOR_DEVELOPMENT.yaml
   - ES_0002_ENGINEERING_OBJECT.yaml
   - ES_0003_ENGINEERING_PATHS.yaml
   - ES_0004_LEADING_SPECIFICATIONS.yaml
-  - RO_A_ENGINEERING_OBJECT_MAP.md
-  - RO_B_ENGINEERING_PATHS.md
-  - RO_C_REPOSITORY_CONTEXT.md
+
+  - RO_B_ENGINEERING_OBJECT_MAP.md
+  - RO_C_ENGINEERING_PATHS.md
+  - RO_D_REPOSITORY_CONTEXT.md
+  - RO_E_ENGINEERING_SYSTEM_MAP.md
+  - RO_F_MEASURED_ENGINEERING_STATES.md
+  - RO_G_ENGINEERING_CONSTRAINTS.md
+  - RO_H_ENGINEERING_REFINEMENTS.md
 
 footer: Admissible generalizations trail leading specifications.
