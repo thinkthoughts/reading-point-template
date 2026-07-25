@@ -1,10 +1,10 @@
-# Eengineering System Map
+# Engineering System Map
 
 ## Engineering Purpose
 
-This document specifies the current sensor system through increasing engineering specification.
+This document specifies the current engineering system through increasing engineering specification.
 
-The Sensor System Map develops engineering understanding before implementation by identifying connected engineering objects, measurable engineering states, engineering relationships, and candidate engineering refinements.
+The Engineering System Map develops engineering understanding before implementation by identifying connected engineering objects, measurable engineering states, engineering relationships, and engineering refinements.
 
 ## Engineering Object
 
@@ -31,21 +31,24 @@ Microcalorimeter spectroscopy
 
 The engineering object develops through continued specification.
 
-## Sensor System
+## Engineering System
 
-Current engineering understanding develops through the following engineering sequence.
+Current engineering development specifies the following engineering system.
 
 ```text
 Physical phenomenon
         │
         ▼
+Sensing mechanism
+        │
+        ▼
 Sensor architecture
         │
         ▼
-Sensor materials
+Materials
         │
         ▼
-Detector fabrication
+Fabrication
         │
         ▼
 Cryogenic environment
@@ -69,11 +72,11 @@ Data analysis
 Measured engineering states
 ```
 
-Additional engineering objects may be specified as repository development continues.
+Additional engineering objects and engineering systems develop through continued specification.
 
-## Current Engineering Understanding
+## Current Specification
 
-Current engineering understanding includes:
+Current specification includes:
 
 - cryogenic quantum sensing
 - transition-edge sensors
@@ -81,13 +84,13 @@ Current engineering understanding includes:
 - cryogenic readout systems
 - automated engineering analysis
 
-Current engineering understanding continues to develop through engineering sessions and additional leading specifications.
+Current specification develops through engineering sessions and leading specifications.
 
 ## Measured Engineering States
 
 Current measurable engineering states remain to be specified.
 
-Candidate measurable engineering states include:
+Initial measurable engineering states include:
 
 - sensor sensitivity
 - energy resolution
@@ -98,20 +101,20 @@ Candidate measurable engineering states include:
 
 Additional measurable engineering states develop through continued engineering work.
 
-## Current Engineering Questions
+## Leading Engineering Questions
 
-Current engineering questions include:
+Current leading engineering questions include:
 
 - Which engineering object currently provides the greatest opportunity for refinement?
 - Which measurable engineering states constrain current sensor performance?
 - Which engineering paths support measurable improvement?
 - Which engineering specifications support technically meaningful collaboration?
 
-Additional engineering questions develop through continued engineering sessions.
+Additional leading engineering questions develop through continued engineering sessions.
 
-## Candidate Engineering Refinements
+## Engineering Refinements
 
-Current refinement categories include:
+Current engineering refinements include:
 
 ### Hardware Engineering
 
@@ -137,7 +140,7 @@ Current refinement categories include:
 - performance evaluation
 - engineering reporting
 
-Candidate refinements develop through additional leading specifications.
+Engineering refinements develop through leading specifications.
 
 ## Engineering Relationships
 
@@ -145,33 +148,24 @@ Current engineering relationships include:
 
 ```text
 Engineering object
-
         │
-
         ▼
-
+Engineering system
+        │
+        ▼
 Engineering paths
-
         │
-
         ▼
-
 Measured engineering states
-
         │
-
         ▼
-
 Leading specifications
-
         │
-
         ▼
-
 Engineering refinement
 ```
 
-Continued engineering refinement develops through measurable engineering states and additional leading specifications.
+Engineering refinement develops through measured engineering states and leading specifications.
 
 ---
 
