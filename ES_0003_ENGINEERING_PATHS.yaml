@@ -1,0 +1,60 @@
+# ES_0003_ENGINEERING_PATHS.yaml
+
+artifact_type: engineering_statement
+
+statement:
+  id: ES_0003
+  title: Engineering Paths
+  repository: sensors-becker
+  status: developing
+  initiated: 2026-07
+
+engineering_object:
+  name: microcalorimeter spectroscopy
+
+statement: >
+  Engineering paths develop from a shared engineering object.
+  Additional leading specifications support refinement across
+  engineering paths.
+
+engineering_paths:
+
+  hardware_engineering:
+    purpose: Develop physical sensing systems.
+
+  software_engineering:
+    purpose: Develop computational sensing systems.
+
+  experimental_engineering:
+    purpose: Connect hardware and software through measurable
+      engineering activities.
+
+relationships:
+
+  develops:
+    - hardware_engineering
+    - software_engineering
+    - experimental_engineering
+
+  shares:
+    - engineering_object
+
+  supports:
+    - leading_specifications
+
+references:
+  - ES_ENGINEERING_STATEMENTS.md
+  - RO_A_ENGINEERING_OBJECT_MAP.md
+  - RO_B_ENGINEERING_PATHS.md
+
+development:
+
+  current:
+    - identify engineering paths
+    - identify engineering relationships
+
+  next:
+    - specify engineering constraints
+    - specify measurable engineering activities
+
+footer: Admissible generalizations trail leading specifications.
