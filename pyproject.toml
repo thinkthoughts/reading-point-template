@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sensors-becker"
+version = "0.1.0"
+description = "Leading specifications for cryogenic quantum-sensor development in preparation for collaboration with Daniel Becker."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Dan Hawkley" }
+]
+
+dependencies = [
+  "ipykernel",
+  "jupyter",
+  "jsonschema",
+  "matplotlib",
+  "networkx",
+  "numpy",
+  "pandas",
+  "pydantic",
+  "pyyaml",
+  "tabulate",
+  "tqdm"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
