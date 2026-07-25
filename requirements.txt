@@ -12,6 +12,7 @@ pandas
 
 pyyaml
 jsonschema
+pydantic
 
 # Figures
 
