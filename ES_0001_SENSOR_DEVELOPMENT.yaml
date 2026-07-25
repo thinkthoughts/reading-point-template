@@ -7,51 +7,61 @@ statement:
   status: developing
   initiated: 2026-07
 
+statement_text: >
+  Sensor development specifies cryogenic quantum-sensor
+  development through measurable engineering states,
+  engineering constraints, and engineering refinements.
+
 engineering_object:
   name: sensor development
   current_specification: cryogenic quantum-sensor development
 
-specified_domain:
-  sequence:
-    - sensor development
-    - quantum sensing
-    - cryogenic sensing
-    - superconducting detectors
-    - transition-edge sensing
-    - microcalorimeter spectroscopy
+object_sequence:
+  - sensor development
+  - quantum sensing
+  - cryogenic sensing
+  - superconducting detectors
+  - transition-edge sensing
+  - microcalorimeter spectroscopy
+
+engineering_relationships:
+
+  develops:
+    - engineering_system
+    - engineering_paths
+
+  supports:
+    - measured_engineering_states
+    - engineering_constraints
+    - engineering_refinements
+    - leading_specifications
 
 engineering_paths:
   - hardware engineering
   - software engineering
   - experimental engineering
 
-leading_specification: >
-  Cryogenic quantum-sensor development connects hardware,
-  software, and experimental engineering through measurable
-  sensor performance.
+development:
 
-repository_context:
-  purpose: >
-    Identify leading specifications for sensor development
-    related to the work of Daniel Becker.
-  collaboration_stage: initial engineering preparation
-  context_date: 2026-07
+  current:
+    - specify engineering object
+    - specify engineering system
+    - identify measured engineering states
 
-development_state:
-  specified:
-    - engineering object
-    - sensor-domain sequence
-    - initial engineering paths
-  continuing:
-    - sensor-system details
-    - current development constraints
-    - candidate hardware refinements
-    - candidate software refinements
-    - candidate experimental refinements
+  next:
+    - identify engineering constraints
+    - identify engineering refinements
+    - prepare engineering session
 
-source_documents:
-  - RO_A_ENGINEERING_OBJECT_MAP.md
-  - RO_B_ENGINEERING_PATHS.md
-  - RO_C_REPOSITORY_CONTEXT.md
+references:
+  - ES_0000_ENGINEERING_STATEMENTS.md
+
+  - RO_B_ENGINEERING_OBJECT_MAP.md
+  - RO_C_ENGINEERING_PATHS.md
+  - RO_D_REPOSITORY_CONTEXT.md
+  - RO_E_ENGINEERING_SYSTEM_MAP.md
+  - RO_F_MEASURED_ENGINEERING_STATES.md
+  - RO_G_ENGINEERING_CONSTRAINTS.md
+  - RO_H_ENGINEERING_REFINEMENTS.md
 
 footer: Admissible generalizations trail leading specifications.
