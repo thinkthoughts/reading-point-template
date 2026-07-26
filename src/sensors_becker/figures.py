@@ -6,7 +6,6 @@ from collections.abc import Sequence
 from pathlib import Path
 
 import matplotlib.pyplot as plt
-import networkx as nx
 from matplotlib.figure import Figure
 
 from sensors_becker.context import RepositoryContext
@@ -33,7 +32,12 @@ def save_figure(
 
     ensure_figure_directory(directory)
     path = directory / filename
-    figure.savefig(path, dpi=dpi, bbox_inches="tight")
+
+    figure.savefig(
+        path,
+        dpi=dpi,
+        bbox_inches="tight",
+    )
 
     if close:
         plt.close(figure)
@@ -41,10 +45,18 @@ def save_figure(
     return path
 
 
+def _title_case_label(value: str) -> str:
+    """Return a display label while preserving technical hyphenation."""
+
+    return value.title()
+
+
 def create_sequence_figure(
     items: Sequence[str],
     *,
     title: str,
+    subtitle: str | None = None,
+    current_item: str | None = None,
     figsize: tuple[float, float] = (8.0, 8.0),
 ) -> Figure:
     """Create a vertical sequence figure from ordered text items."""
@@ -53,39 +65,72 @@ def create_sequence_figure(
         raise ValueError("items must contain at least one entry")
 
     figure, axis = plt.subplots(figsize=figsize)
+
     axis.set_xlim(0.0, 1.0)
-    axis.set_ylim(-0.5, len(items) - 0.5)
+    axis.set_ylim(-0.6, len(items) - 0.35)
     axis.axis("off")
-    axis.set_title(title, pad=20)
+
+    figure.suptitle(
+        title,
+        y=0.98,
+        fontsize=16,
+    )
+
+    if subtitle:
+        axis.set_title(
+            subtitle,
+            pad=14,
+            fontsize=10,
+        )
 
     y_positions = list(reversed(range(len(items))))
 
     for index, (item, y_position) in enumerate(
         zip(items, y_positions, strict=True)
     ):
+        is_current = item == current_item
+
         axis.text(
             0.5,
             y_position,
-            item,
+            _title_case_label(item),
             ha="center",
             va="center",
+            fontsize=11,
             bbox={
-                "boxstyle": "round,pad=0.5",
+                "boxstyle": "round,pad=0.62",
                 "facecolor": "white",
                 "edgecolor": "black",
+                "linewidth": 2.0 if is_current else 1.4,
             },
         )
 
-        if index < len(items) - 1:
-            next_y_position = y_positions[index + 1]
-            axis.annotate(
-                "",
-                xy=(0.5, next_y_position + 0.25),
-                xytext=(0.5, y_position - 0.25),
-                arrowprops={"arrowstyle": "->", "linewidth": 1.2},
+        if is_current:
+            axis.text(
+                0.5,
+                y_position - 0.34,
+                "Current Specification",
+                ha="center",
+                va="top",
+                fontsize=8,
             )
 
-    figure.tight_layout()
+        if index < len(items) - 1:
+            next_y_position = y_positions[index + 1]
+
+            axis.annotate(
+                "",
+                xy=(0.5, next_y_position + 0.30),
+                xytext=(0.5, y_position - 0.30),
+                arrowprops={
+                    "arrowstyle": "->",
+                    "linewidth": 1.6,
+                    "shrinkA": 0,
+                    "shrinkB": 0,
+                },
+            )
+
+    figure.tight_layout(rect=(0.03, 0.03, 0.97, 0.95))
     return figure
 
 
@@ -95,58 +140,133 @@ def create_engineering_object_figure(
     """Create the repository engineering-object sequence figure."""
 
     validate_context(context)
+
     return create_sequence_figure(
         context.object_sequence,
         title="Engineering Object Sequence",
+        subtitle="Increasing Engineering Specification",
+        current_item=context.current_specification,
+        figsize=(8.0, 8.5),
     )
 
 
 def create_engineering_cycle_figure(
     context: RepositoryContext,
     *,
-    figsize: tuple[float, float] = (9.0, 7.0),
+    figsize: tuple[float, float] = (8.5, 9.0),
 ) -> Figure:
-    """Create a directed graph of the engineering development cycle."""
+    """Create the engineering-development trail and continuation path."""
 
     validate_context(context)
 
-    nodes = (
-        "Engineering object",
-        "Engineering system",
-        "Measured engineering states",
-        "Engineering constraints",
-        "Engineering refinements",
-        "Leading specifications",
+    stages = (
+        "Engineering Object",
+        "Engineering System",
+        "Measured Engineering States",
+        "Engineering Constraints",
+        "Leading Specifications",
+        "Engineering Refinements",
+        "Next Engineering Session",
     )
-
-    graph = nx.DiGraph()
-    graph.add_edges_from(zip(nodes, (*nodes[1:], nodes[0]), strict=True))
 
     figure, axis = plt.subplots(figsize=figsize)
-    positions = nx.circular_layout(graph)
 
-    nx.draw_networkx_nodes(graph, positions, ax=axis, node_size=3200)
-    nx.draw_networkx_edges(
-        graph,
-        positions,
-        ax=axis,
-        arrows=True,
-        arrowsize=20,
-        width=1.5,
-    )
-    nx.draw_networkx_labels(
-        graph,
-        positions,
-        ax=axis,
-        font_size=9,
+    axis.set_xlim(0.0, 1.0)
+    axis.set_ylim(-0.75, len(stages) - 0.15)
+    axis.axis("off")
+
+    figure.suptitle(
+        "Engineering Development Cycle",
+        y=0.985,
+        fontsize=16,
     )
 
     axis.set_title(
-        f"{context.repository}: Engineering Development Cycle",
-        pad=20,
+        "Measured states connect the engineering system "
+        "to continued refinement.",
+        pad=12,
+        fontsize=10,
     )
-    axis.axis("off")
-    figure.tight_layout()
+
+    y_positions = list(reversed(range(len(stages))))
+    x_position = 0.46
+
+    for index, (stage, y_position) in enumerate(
+        zip(stages, y_positions, strict=True)
+    ):
+        is_leading_specification = stage == "Leading Specifications"
+        is_next_session = stage == "Next Engineering Session"
+
+        axis.text(
+            x_position,
+            y_position,
+            stage,
+            ha="center",
+            va="center",
+            fontsize=10.5,
+            bbox={
+                "boxstyle": "round,pad=0.58",
+                "facecolor": "white",
+                "edgecolor": "black",
+                "linewidth": (
+                    2.0
+                    if is_leading_specification
+                    else 1.4
+                ),
+                "linestyle": "--" if is_next_session else "-",
+            },
+        )
+
+        if index < len(stages) - 1:
+            next_y_position = y_positions[index + 1]
+
+            axis.annotate(
+                "",
+                xy=(x_position, next_y_position + 0.30),
+                xytext=(x_position, y_position - 0.30),
+                arrowprops={
+                    "arrowstyle": "->",
+                    "linewidth": 1.6,
+                    "shrinkA": 0,
+                    "shrinkB": 0,
+                },
+            )
+
+    first_y = y_positions[0]
+    final_y = y_positions[-1]
+
+    axis.annotate(
+        "",
+        xy=(x_position + 0.18, first_y),
+        xytext=(x_position + 0.18, final_y),
+        arrowprops={
+            "arrowstyle": "->",
+            "linewidth": 1.4,
+            "connectionstyle": "arc3,rad=-0.34",
+        },
+    )
+
+    axis.text(
+        0.82,
+        (first_y + final_y) / 2,
+        "Continued Engineering Development",
+        rotation=90,
+        ha="center",
+        va="center",
+        fontsize=9,
+    )
+
+    axis.text(
+        0.46,
+        -0.48,
+        context.footer,
+        ha="center",
+        va="center",
+        fontsize=8,
+        style="italic",
+    )
+
+    figure.tight_layout(rect=(0.04, 0.04, 0.96, 0.95))
     return figure
 
 
@@ -166,6 +286,7 @@ def export_default_figures(
         directory=directory,
         close=True,
     )
+
     cycle_path = save_figure(
         cycle_figure,
         "engineering_development_cycle.png",
