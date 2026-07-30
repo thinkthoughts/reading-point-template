@@ -2,15 +2,44 @@
 
 ## Engineering Purpose
 
-This document specifies engineering refinements that support continued engineering development.
+This document specifies engineering refinements that support measured engineering improvement through identified engineering constraints.
 
-Engineering refinements develop from measured engineering states and engineering constraints through leading specifications.
+Engineering refinements develop from measured engineering states and engineering constraints through continued specification.
+
+---
 
 ## Engineering Context
 
 Engineering refinements develop through the following engineering sequence.
 
 ```text
+Measured engineering states
+        │
+        ▼
+Engineering constraints
+        │
+        ▼
+Engineering refinements
+        │
+        ▼
+Measured engineering improvement
+        │
+        ▼
+Leading specifications
+```
+
+Engineering refinements support continued engineering improvement.
+
+---
+
+## Engineering Refinement
+
+Engineering refinement develops through measurable engineering improvement.
+
+```text
+Engineering object
+        │
+        ▼
 Engineering system
         │
         ▼
@@ -23,32 +52,12 @@ Engineering constraints
 Engineering refinements
         │
         ▼
-Engineering priorities
-        │
-        ▼
-Engineering sessions
-```
-
-Engineering refinements support continued engineering development.
-
-## Engineering Refinement
-
-Engineering refinement develops through measurable engineering improvement.
-
-```text
-Engineering constraint
-        │
-        ▼
-Engineering refinement
-        │
-        ▼
 Measured engineering improvement
-        │
-        ▼
-Leading specification
 ```
 
 Engineering refinements support continued engineering comparison.
+
+---
 
 ## Current Engineering Refinements
 
@@ -84,61 +93,83 @@ Initial refinement categories include:
 - experimental repeatability
 - engineering reporting
 
-Additional engineering refinements develop through engineering sessions.
+Additional engineering refinements develop through continued engineering work.
+
+---
 
 ## Engineering Relationships
 
-Engineering refinements support relationships between:
+Engineering refinements support the following engineering relationships.
 
-- engineering systems
-- measured engineering states
-- engineering constraints
-- engineering priorities
-- leading specifications
-- engineering sessions
+```text
+Engineering object
+        │
+        ▼
+Engineering system
+        │
+        ▼
+Measured engineering states
+        │
+        ▼
+Engineering constraints
+        │
+        ▼
+Engineering refinements
+        │
+        ▼
+Measured engineering improvement
+        │
+        ▼
+Leading specifications
+```
 
-Engineering refinements support measurable engineering improvement.
+Engineering refinements support measured engineering improvement rather than isolated modification.
 
-## Engineering Priorities
+---
 
-Engineering priorities develop through engineering refinement.
+## Measured Engineering Improvement
 
-Current engineering priorities include:
+Measured engineering improvement develops through engineering refinements.
 
-- improve measured engineering states
-- reduce engineering constraints
-- support measurable comparison
-- refine engineering understanding
-- prepare subsequent engineering sessions
+Measured engineering improvement may include:
 
-Engineering priorities develop through continued engineering work.
+- improved detector performance
+- improved measurement stability
+- improved calibration quality
+- improved signal processing
+- improved system reliability
+- improved experimental repeatability
+
+Measured engineering improvement supports leading specifications.
+
+---
 
 ## Leading Engineering Questions
 
 Current leading engineering questions include:
 
 - Which engineering refinement most directly addresses the current engineering constraints?
-- Which engineering refinement supports the greatest measurable engineering improvement?
-- Which engineering refinement supports additional engineering paths?
-- Which engineering refinement best supports technically meaningful collaboration?
+- Which engineering refinement produces the greatest measured engineering improvement?
+- Which measured engineering improvements support additional engineering refinement?
+- Which measured engineering improvements should guide subsequent engineering sessions?
 
-Additional leading engineering questions develop through continued engineering sessions.
+Additional leading engineering questions develop through continued engineering work.
+
+---
 
 ## Engineering Development
 
 Engineering refinements support:
 
 - engineering understanding
-- measurable engineering improvement
-- engineering priorities
-- engineering sessions
+- engineering comparison
+- measured engineering improvement
 - leading specifications
 
-Engineering development advances through engineering refinement.
+Engineering refinements support measured engineering improvement that informs leading specifications.
 
 ---
 
-*Engineering refinements support measurable engineering improvement.*
+*Engineering refinements support measured engineering improvement.*
 
 *Admissible generalizations trail leading specifications.*
-
