@@ -2,15 +2,41 @@
 
 ## Engineering Purpose
 
-This document specifies the engineering constraints that currently limit engineering development.
+This document specifies the engineering constraints that guide engineering refinement through measured engineering states.
 
-Engineering constraints develop from measured engineering states and support subsequent engineering refinements.
+Engineering constraints identify the current limits of engineering systems and support continued engineering development.
+
+---
 
 ## Engineering Context
 
-Engineering constraints develop through the following engineering sequence.
+Engineering constraints develop from measured engineering states.
 
 ```text
+Measured engineering states
+        │
+        ▼
+Engineering constraints
+        │
+        ▼
+Engineering refinements
+        │
+        ▼
+Measured engineering improvement
+```
+
+Engineering constraints support continued engineering refinement.
+
+---
+
+## Engineering Identification
+
+Engineering constraints develop through engineering measurement.
+
+```text
+Engineering object
+        │
+        ▼
 Engineering system
         │
         ▼
@@ -23,95 +49,87 @@ Engineering constraints
 Engineering refinements
 ```
 
-Engineering constraints support continued engineering development.
+Engineering constraints identify opportunities for continued engineering improvement.
 
-## Engineering Constraint
-
-Engineering constraints develop through measurable engineering limitations.
-
-```text
-Measured engineering state
-        │
-        ▼
-Engineering constraint
-        │
-        ▼
-Engineering refinement
-```
-
-Engineering constraints support engineering comparison and engineering priorities.
+---
 
 ## Current Engineering Constraints
 
 Current engineering constraints remain under continued specification.
 
-Initial engineering constraint categories include:
+Initial engineering constraints may include:
 
-### Hardware Engineering
+- detector sensitivity
+- energy resolution
+- measurement uncertainty
+- signal-to-noise ratio
+- calibration stability
+- operating temperature
+- detector response time
+- readout performance
+- system reliability
+- engineering complexity
 
-- sensing mechanisms
-- material properties
-- detector fabrication
-- cryogenic integration
-- readout electronics
-- detector packaging
+Additional engineering constraints develop through continued engineering work.
 
-### Software Engineering
-
-- instrument control
-- signal acquisition
-- signal processing
-- calibration
-- data analysis
-- automation
-
-### Experimental Engineering
-
-- measurement procedures
-- environmental stability
-- sensor characterization
-- experimental repeatability
-- performance evaluation
-- engineering reporting
-
-Additional engineering constraints develop through engineering sessions.
+---
 
 ## Engineering Relationships
 
-Engineering constraints support relationships between:
+Engineering constraints support the following engineering relationships.
 
-- engineering systems
-- measured engineering states
-- engineering refinements
-- engineering priorities
-- leading specifications
-- engineering sessions
+```text
+Engineering object
+        │
+        ▼
+Engineering system
+        │
+        ▼
+Measured engineering states
+        │
+        ▼
+Engineering constraints
+        │
+        ▼
+Engineering refinements
+        │
+        ▼
+Measured engineering improvement
+```
 
-Engineering constraints support measurable engineering comparison.
+Engineering constraints support engineering refinement rather than isolated observation.
 
-## Engineering Priorities
+---
 
-Engineering priorities develop from engineering constraints.
+## Engineering Refinement
 
-Current engineering priorities include:
+Engineering refinement develops through identified engineering constraints.
 
-- identify the most significant engineering constraints
-- compare engineering constraints across engineering paths
-- connect engineering constraints to measured engineering states
-- prepare engineering refinements
+Engineering refinement may include:
 
-Engineering priorities develop through continued engineering work.
+- hardware refinement
+- software refinement
+- detector refinement
+- calibration refinement
+- measurement refinement
+- experimental refinement
+
+Engineering refinement supports measured engineering improvement.
+
+---
 
 ## Leading Engineering Questions
 
 Current leading engineering questions include:
 
-- Which engineering constraints most strongly limit current sensor performance?
-- Which measured engineering states best identify those constraints?
-- Which engineering paths currently contain the greatest constraints?
-- Which engineering constraints most directly support future engineering refinement?
+- Which engineering constraints currently limit system performance?
+- Which engineering constraints most strongly influence measured engineering states?
+- Which engineering refinements most directly address current engineering constraints?
+- Which engineering constraints should guide subsequent engineering sessions?
 
-Additional leading engineering questions develop through continued engineering sessions.
+Additional leading engineering questions develop through continued engineering work.
+
+---
 
 ## Engineering Development
 
@@ -119,14 +137,14 @@ Engineering constraints support:
 
 - engineering understanding
 - engineering comparison
-- engineering priorities
-- engineering refinements
+- engineering refinement
+- measured engineering improvement
 - leading specifications
 
-Engineering development advances through engineering constraints.
+Engineering constraints direct engineering refinements and support measured engineering improvement.
 
 ---
 
-*Engineering constraints support engineering refinement.*
+*Engineering constraints direct engineering refinements.*
 
 *Admissible generalizations trail leading specifications.*
