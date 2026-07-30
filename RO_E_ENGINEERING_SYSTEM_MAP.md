@@ -2,47 +2,36 @@
 
 ## Engineering Purpose
 
-This document specifies the current engineering system through increasing engineering specification.
+This document specifies the Engineering System that develops from the current Engineering Object.
 
-The Engineering System Map develops engineering understanding before implementation by identifying connected engineering objects, measurable engineering states, engineering relationships, and engineering refinements.
+Engineering Systems connect Engineering Objects to Measured Engineering States through continued specification.
 
-## Engineering Object
+---
 
-Current engineering development specifies the following engineering object sequence.
+## Current Engineering Object
+
+Current Engineering Object:
 
 ```text
-Sensor development
-        │
-        ▼
-Quantum sensing
-        │
-        ▼
-Cryogenic sensing
-        │
-        ▼
-Superconducting detectors
-        │
-        ▼
-Transition-edge sensing
-        │
-        ▼
-Microcalorimeter spectroscopy
+Microcalorimeter Spectroscopy
 ```
 
-The engineering object develops through continued specification.
+The Engineering System develops from this shared Engineering Object.
+
+---
 
 ## Engineering System
 
-Current engineering development specifies the following engineering system.
+Current Engineering System develops through the following engineering progression.
 
 ```text
-Physical phenomenon
+Physical Phenomenon
         │
         ▼
-Sensing mechanism
+Sensing Mechanism
         │
         ▼
-Sensor architecture
+Sensor Architecture
         │
         ▼
 Materials
@@ -51,32 +40,31 @@ Materials
 Fabrication
         │
         ▼
-Cryogenic environment
+Cryogenic Environment
         │
         ▼
-Readout electronics
+Readout Electronics
         │
         ▼
-Instrument control
+Instrument Control
         │
         ▼
-Signal acquisition
+Signal Acquisition
         │
         ▼
-Calibration
+Engineering Measurement
         │
         ▼
-Data analysis
-        │
-        ▼
-Measured engineering states
+Measured Engineering States
 ```
 
-Additional engineering objects and engineering systems develop through continued specification.
+Additional Engineering System components develop through continued specification.
 
-## Current Specification
+---
 
-Current specification includes:
+## Current Engineering System
+
+Current Engineering System includes:
 
 - cryogenic quantum sensing
 - transition-edge sensors
@@ -84,91 +72,68 @@ Current specification includes:
 - cryogenic readout systems
 - automated engineering analysis
 
-Current specification develops through engineering sessions and leading specifications.
+Additional Engineering System components develop through continued engineering work.
 
-## Measured Engineering States
+---
 
-Current measurable engineering states remain to be specified.
+## Engineering Relationships
 
-Initial measurable engineering states include:
+Engineering Systems support the following engineering progression.
 
-- sensor sensitivity
-- energy resolution
-- measurement repeatability
-- calibration stability
-- signal quality
-- detector performance
+```text
+Engineering Object
+        │
+        ▼
+Engineering System
+        │
+        ▼
+Measured Engineering States
+        │
+        ▼
+Engineering Constraints
+        │
+        ▼
+Engineering Refinements
+        │
+        ▼
+Measured Engineering Improvement
+        │
+        ▼
+Leading Specifications
+```
 
-Additional measurable engineering states develop through continued engineering work.
+Engineering Systems produce Measured Engineering States that support continued engineering refinement.
+
+---
 
 ## Leading Engineering Questions
 
 Current leading engineering questions include:
 
-- Which engineering object currently provides the greatest opportunity for refinement?
-- Which measurable engineering states constrain current sensor performance?
-- Which engineering paths support measurable improvement?
-- Which engineering specifications support technically meaningful collaboration?
+- Which Engineering System most accurately represents the current Engineering Object?
+- Which Engineering Measurements best characterize current system performance?
+- Which Measured Engineering States currently identify Engineering Constraints?
+- Which Engineering System refinements most directly support Measured Engineering Improvement?
 
-Additional leading engineering questions develop through continued engineering sessions.
-
-## Engineering Refinements
-
-Current engineering refinements include:
-
-### Hardware Engineering
-
-- sensor materials
-- detector fabrication
-- cryogenic integration
-- readout electronics
-- packaging
-
-### Software Engineering
-
-- instrument control
-- signal acquisition
-- calibration
-- data analysis
-- visualization
-
-### Experimental Engineering
-
-- measurement procedures
-- sensor characterization
-- environmental control
-- performance evaluation
-- engineering reporting
-
-Engineering refinements develop through leading specifications.
-
-## Engineering Relationships
-
-Current engineering relationships include:
-
-```text
-Engineering object
-        │
-        ▼
-Engineering system
-        │
-        ▼
-Engineering paths
-        │
-        ▼
-Measured engineering states
-        │
-        ▼
-Leading specifications
-        │
-        ▼
-Engineering refinement
-```
-
-Engineering refinement develops through measured engineering states and leading specifications.
+Additional leading engineering questions develop through continued engineering work.
 
 ---
 
-*Measured engineering states support engineering refinement.*
+## Engineering Development
+
+Engineering Systems support:
+
+- engineering understanding
+- measured engineering states
+- engineering constraints
+- engineering refinements
+- measured engineering improvement
+- leading specifications
+
+Engineering Systems support continued engineering specification.
+
+---
+
+*Engineering Systems produce Measured Engineering States.*
 
 *Admissible generalizations trail leading specifications.*
