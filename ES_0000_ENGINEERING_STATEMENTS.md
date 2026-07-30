@@ -2,114 +2,112 @@
 
 ## Engineering Purpose
 
-This document specifies the Engineering Statement artifact used throughout this repository.
+This document specifies the Engineering Statements that define repository engineering grammar.
 
-Engineering Statements specify engineering objects, engineering relationships, and leading specifications through reusable engineering statements.
+Engineering Statements specify reusable engineering relationships that support continued specification.
 
-Engineering Statements develop through continued refinement while preserving stable engineering intent.
+---
 
-## Engineering Structure
+## Canonical Engineering Grammar
 
-Each Engineering Statement specifies one engineering object or one engineering relationship.
-
-Engineering Statements remain intentionally focused so they may be reused, refined, referenced, and combined throughout repository development.
-
-Typical Engineering Statement structure includes:
+Engineering Statements develop through the following engineering relationships.
 
 ```text
-Artifact
-
-↓
-
-Engineering Statement
-
-↓
-
 Engineering Object
-
-↓
-
-Engineering Relationships
-
-↓
-
-Leading Specification
-
-↓
-
-References
-
-↓
-
-Development Status
+        │
+        ▼
+Engineering System
+        │
+        ▼
+Measured Engineering States
+        │
+        ▼
+Engineering Constraints
+        │
+        ▼
+Engineering Refinements
+        │
+        ▼
+Measured Engineering Improvement
+        │
+        ▼
+Leading Specifications
+        │
+        ▼
+Admissible Generalizations
 ```
 
-Additional fields may be specified as engineering requirements develop.
+Engineering Statements specify one engineering relationship within this progression.
 
-## Engineering Objects
+---
 
-Engineering Statements specify engineering objects rather than engineering documents.
+## Canonical Engineering Statements
 
-Engineering objects may include:
+Engineering Object specifies Engineering System.
 
-- Engineering systems
-- Engineering processes
-- Engineering relationships
-- Engineering constraints
-- Engineering measurements
-- Engineering specifications
+Engineering System produces Measured Engineering States.
 
-Engineering objects become increasingly specified through continued engineering work.
+Engineering Measurement records Measured Engineering States.
+
+Measured Engineering States identify Engineering Constraints.
+
+Engineering Constraints direct Engineering Refinements.
+
+Engineering Refinements support Measured Engineering Improvement.
+
+Measured Engineering Improvement informs Leading Specifications.
+
+Leading Specifications constrain Admissible Generalizations.
+
+Admissible Generalizations trail Leading Specifications.
+
+---
 
 ## Engineering Relationships
 
-Engineering Statements specify relationships between engineering objects.
-
-Engineering relationships may include:
+Engineering Statements specify relationships such as:
 
 - specifies
-- develops
+- produces
+- records
+- identifies
+- directs
 - supports
+- informs
 - constrains
-- refines
-- measures
-- connects
 - trails
 
-Additional engineering relationships may be specified through continued repository development.
+Additional engineering relationships develop through continued specification.
 
-## Leading Specifications
-
-Each Engineering Statement develops one leading specification.
-
-Engineering Statements support refinement rather than conclusion.
-
-Leading specifications may support additional Engineering Statements throughout the repository.
+---
 
 ## Repository Relationships
 
-Engineering Statements support the repository's Reading Order while remaining independent engineering artifacts.
+Engineering Statements support the Reading Order while remaining independent engineering artifacts.
 
 Reading Order documents specify repository comprehension.
 
-Engineering Statements specify engineering comprehension.
+Engineering Statements specify repository engineering grammar.
 
-Engineering Statements may reference Reading Order documents without duplicating repository identity.
+Reading Points apply Engineering Statements through engineering dialogue.
+
+---
 
 ## Engineering Development
 
-Engineering Statements develop through continued engineering sessions.
+Engineering Statements support:
 
-Engineering refinement may specify:
+- engineering understanding
+- engineering comparison
+- engineering refinement
+- measured engineering improvement
+- leading specifications
 
-- additional engineering objects
-- additional engineering relationships
-- additional leading specifications
-- additional engineering paths
+Engineering Statements develop through continued specification.
 
-Engineering Statements remain reusable as repository development continues.
+---
 
-## Engineering Instances
+## Engineering Statement Instances
 
 Engineering Statement instances follow the convention:
 
@@ -127,4 +125,6 @@ Statement titles identify their engineering purpose.
 
 ---
 
-**Engineering Statements specify engineering intent. Engineering refinement develops Engineering Statements.**
+*Engineering Statements specify repository engineering grammar.*
+
+*Admissible generalizations trail leading specifications.*
