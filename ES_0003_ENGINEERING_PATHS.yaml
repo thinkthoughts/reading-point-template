@@ -4,65 +4,70 @@ statement:
   id: ES_0003
   title: Engineering Paths
   repository: sensors-becker
+  version: 1.0.0
   status: developing
   initiated: 2026-07
 
 statement_text: >
-  Engineering paths develop from a shared engineering object.
-  Hardware, software, and experimental engineering support the
-  engineering system through measured engineering states,
-  engineering constraints, and engineering refinements.
+  Engineering Paths support Engineering Systems through
+  coordinated hardware, software, and experimental
+  engineering activities. Engineering Paths contribute
+  measured engineering states, engineering constraints,
+  engineering refinements, and measured engineering
+  improvement through continued specification.
 
 engineering_object:
-  name: microcalorimeter spectroscopy
+  name: Sensor Development
+  current_specification: Microcalorimeter Spectroscopy
 
 engineering_paths:
 
-  hardware_engineering:
+  Hardware Engineering:
     purpose: >
       Develop physical sensing systems.
 
-  software_engineering:
+  Software Engineering:
     purpose: >
       Develop computational sensing systems.
 
-  experimental_engineering:
+  Experimental Engineering:
     purpose: >
-      Connect hardware and software through measured
-      engineering activities.
+      Connect hardware and software through engineering
+      measurement and validation.
 
 engineering_relationships:
 
-  develops:
-    - hardware_engineering
-    - software_engineering
-    - experimental_engineering
-
-  shares:
-    - engineering_object
-
   supports:
-    - engineering_system
-    - measured_engineering_states
-    - engineering_constraints
-    - engineering_refinements
-    - leading_specifications
+    - Engineering System
+
+  produces:
+    - Measured Engineering States
+
+  identifies:
+    - Engineering Constraints
+
+  directs:
+    - Engineering Refinements
+
+  supports_improvement:
+    - Measured Engineering Improvement
+
+  informs:
+    - Leading Specifications
 
 development:
 
   current:
-    - identify engineering paths
-    - specify engineering relationships
+    - Specify Engineering Paths
+    - Define Engineering Relationships
 
   next:
-    - specify engineering system
-    - identify measured engineering states
-    - identify engineering constraints
-    - identify engineering refinements
+    - Coordinate Hardware Engineering
+    - Coordinate Software Engineering
+    - Coordinate Experimental Engineering
 
 references:
   - ES_0000_ENGINEERING_STATEMENTS.md
-
   - RO_B_ENGINEERING_OBJECT_MAP.md
   - RO_C_ENGINEERING_PATHS.md
   - RO_E_ENGINEERING_SYSTEM_MAP.md
