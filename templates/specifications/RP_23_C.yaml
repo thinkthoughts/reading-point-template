@@ -1,0 +1,64 @@
+identity:
+  notebook_id: NB_23_C_MEASURED_ENGINEERING_STATES
+  reading_point: RP_23
+  stage: C
+  version: 1.1.0
+  status: candidate
+reading_point:
+  inherited_from: NB_23_B_ENGINEERING_SYSTEM
+  natural_foundation: Engineering System
+  engineering_objective: Produce Measured Engineering States.
+  engineering_statements:
+  - Continued Specification supports Engineering Object.
+  - Engineering Object specifies Engineering System.
+  - Engineering System produces Measured Engineering States.
+  repository_grammar:
+  - Engineering Object specifies Engineering System.
+  - Engineering System produces Measured Engineering States.
+  - Measurement records Measured Engineering States.
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
+  - Measured Engineering Improvement informs Leading Specifications.
+  - Leading Specifications constrain Admissible Generalizations.
+  - Admissible Generalizations support Engineering Understanding.
+  - Engineering Understanding guides Engineering Sessions.
+  - Engineering Sessions produce Engineering Records.
+  - Engineering Records support Engineering Reports.
+  - Engineering Reports support Repository Contributions.
+  - Repository Contributions support Repository Development.
+  - Repository Development supports Continued Specification.
+  - Continued Specification supports Engineering Object.
+  forward_context: Engineering Constraints
+  status: complete
+engineering_object: Microcalorimeter
+engineering_direction: Toward next-generation microcalorimeters.
+footer: Admissible generalizations trail leading specifications.
+dialogue:
+- order: A
+  concept: Engineering Object
+  first_label: Continued Specification
+  second_label: Engineering Object
+  supporting_context:
+  - Repository Development
+  - Engineering System
+  engineering_statement: Continued Specification supports Engineering Object.
+  status: admitted
+- order: B
+  concept: Engineering System
+  first_label: Engineering Object
+  second_label: Engineering System
+  supporting_context:
+  - Continued Specification
+  - Measured Engineering States
+  engineering_statement: Engineering Object specifies Engineering System.
+  status: admitted
+- order: C
+  concept: Measured Engineering States
+  first_label: Engineering System
+  second_label: Measured Engineering States
+  supporting_context:
+  - Engineering Object
+  - Engineering Constraints
+  engineering_statement: Engineering System produces Measured Engineering States.
+  status: candidate
