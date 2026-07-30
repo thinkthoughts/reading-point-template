@@ -2,51 +2,116 @@
 
 ## Engineering Purpose
 
-This document specifies the current engineering context that supports the repository's engineering object and engineering paths.
+This document specifies the current engineering context that supports continued repository development.
 
-Repository context develops through engineering sessions, technical discussions, leading specifications, and continued collaboration.
-
-## Current Engineering Context
-
-This repository began following discussions during quantum-related seminars in July 2026.
-
-Initial discussions identified opportunities to better understand cryogenic quantum-sensor development and the engineering activities surrounding sensor research.
-
-Current engineering work focuses on developing engineering understanding before proposing additional engineering specifications.
-
-## Current Engineering Session
-
-Current engineering activities include:
-
-* Specifying the engineering object
-* Specifying engineering paths
-* Identifying candidate collaboration opportunities
-* Developing repository structure
-* Preparing future engineering discussions
-
-## Current Leading Questions
-
-Current engineering questions include:
-
-* Which engineering problems currently constrain sensor development?
-* Which engineering paths present the greatest opportunities for refinement?
-* Which hardware and software developments support measurable improvements?
-* Which engineering specifications support productive collaboration?
-
-Additional questions develop through future engineering sessions.
-
-## Collaboration Context
-
-Current collaboration emphasizes understanding before refinement.
-
-Future engineering sessions may introduce additional specifications, engineering statements, repository reports, and implementation work.
-
-## Repository Development
-
-This repository develops through continued engineering sessions.
-
-Each engineering session contributes additional leading specifications that support subsequent engineering work.
+Repository context develops through engineering understanding, public research, engineering sessions, and continued specification.
 
 ---
 
-**Engineering sessions specify repository context. Repository context supports continued engineering development.**
+## Current Engineering Context
+
+Current repository development focuses on cryogenic quantum-sensor engineering.
+
+Engineering understanding develops through continued specification before implementation.
+
+Current Engineering Object:
+
+```text
+Microcalorimeter Spectroscopy
+```
+
+Current engineering work supports technically meaningful collaboration through continued engineering development.
+
+---
+
+## Repository Context
+
+Repository context develops through the following engineering progression.
+
+```text
+Engineering Object
+        │
+        ▼
+Engineering System
+        │
+        ▼
+Measured Engineering States
+        │
+        ▼
+Engineering Constraints
+        │
+        ▼
+Engineering Refinements
+        │
+        ▼
+Measured Engineering Improvement
+        │
+        ▼
+Leading Specifications
+```
+
+Repository context supports continued engineering specification.
+
+---
+
+## Current Engineering Activities
+
+Current engineering activities include:
+
+- specifying the Engineering Object
+- specifying the Engineering System
+- identifying Measured Engineering States
+- identifying Engineering Constraints
+- developing Engineering Refinements
+- developing Leading Specifications
+
+Additional engineering activities develop through continued engineering work.
+
+---
+
+## Current Engineering Questions
+
+Current leading engineering questions include:
+
+- Which Engineering System currently best represents the Engineering Object?
+- Which Measured Engineering States currently characterize engineering performance?
+- Which Engineering Constraints currently limit engineering development?
+- Which Engineering Refinements most directly improve measured engineering performance?
+
+Additional engineering questions develop through continued engineering work.
+
+---
+
+## Collaboration Context
+
+Current collaboration emphasizes engineering understanding before implementation.
+
+Repository engineering develops through:
+
+- Reading Order
+- Engineering Statements
+- Reading Point Specifications
+- Notebook Compiler
+- Notebook Bundles
+
+These engineering artifacts support continued technical collaboration.
+
+---
+
+## Repository Development
+
+Repository development supports:
+
+- engineering understanding
+- engineering comparison
+- measured engineering improvement
+- leading specifications
+- continued engineering refinement
+
+Repository context supports continued engineering specification.
+
+---
+
+*Repository Context supports continued engineering understanding.*
+
+*Admissible generalizations trail leading specifications.*
