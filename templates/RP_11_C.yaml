@@ -1,0 +1,55 @@
+identity:
+  notebook_id: NB_11_C_MEASURED_ENGINEERING_IMPROVEMENT
+  reading_point: RP_11
+  stage: C
+  version: 1.1.0
+  status: candidate
+reading_point:
+  inherited_from: NB_11_B_ENGINEERING_REFINEMENTS
+  natural_foundation: Measured Engineering States
+  engineering_objective: Measure Engineering Improvement.
+  engineering_statements:
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
+  repository_grammar:
+  - Engineering Object specifies Engineering System.
+  - Engineering System produces Measured Engineering States.
+  - Measurement records Measured Engineering States.
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
+  - Measured Engineering Improvement informs Leading Specifications.
+  forward_context: Leading Specifications
+  status: complete
+engineering_object: Microcalorimeter
+engineering_direction: Toward next-generation microcalorimeters.
+footer: Admissible generalizations trail leading specifications.
+dialogue:
+- order: A
+  concept: Engineering Constraints
+  first_label: Measured Engineering States
+  second_label: Engineering Constraints
+  supporting_context:
+  - Engineering System
+  - Engineering Refinements
+  engineering_statement: Measured Engineering States identify Engineering Constraints.
+  status: admitted
+- order: B
+  concept: Engineering Refinements
+  first_label: Engineering Constraints
+  second_label: Engineering Refinements
+  supporting_context:
+  - Measured Engineering States
+  - Leading Specification
+  engineering_statement: Engineering Constraints direct Engineering Refinements.
+  status: admitted
+- order: C
+  concept: Measured Engineering Improvement
+  first_label: Engineering Refinements
+  second_label: Measured Engineering Improvement
+  supporting_context:
+  - Engineering Constraints
+  - Leading Specification
+  engineering_statement: Engineering Refinements support Measured Engineering Improvement.
+  status: candidate
