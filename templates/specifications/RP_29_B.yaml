@@ -1,0 +1,54 @@
+identity:
+  notebook_id: NB_29_B_ENGINEERING_REFINEMENTS
+  reading_point: RP_29
+  stage: B
+  version: 1.1.0
+  status: candidate
+reading_point:
+  inherited_from: NB_29_A_ENGINEERING_CONSTRAINTS
+  natural_foundation: Engineering Constraints
+  engineering_objective: Direct Engineering Refinements.
+  engineering_statements:
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  repository_grammar:
+  - Engineering Object specifies Engineering System.
+  - Engineering System produces Measured Engineering States.
+  - Measurement records Measured Engineering States.
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
+  - Measured Engineering Improvement informs Leading Specifications.
+  - Leading Specifications constrain Admissible Generalizations.
+  - Admissible Generalizations support Engineering Understanding.
+  - Engineering Understanding guides Engineering Sessions.
+  - Engineering Sessions produce Engineering Records.
+  - Engineering Records support Engineering Reports.
+  - Engineering Reports support Repository Contributions.
+  - Repository Contributions support Repository Development.
+  - Repository Development supports Continued Specification.
+  - Continued Specification supports Engineering Object.
+  forward_context: Measured Engineering Improvement
+  status: developing
+engineering_object: Microcalorimeter
+engineering_direction: Toward next-generation microcalorimeters.
+footer: Admissible generalizations trail leading specifications.
+dialogue:
+- concept: Engineering Constraints
+  first_label: Measured Engineering States
+  second_label: Engineering Constraints
+  supporting_context:
+  - Engineering System
+  - Engineering Refinements
+  engineering_statement: Measured Engineering States identify Engineering Constraints.
+  order: A
+  status: admitted
+- concept: Engineering Refinements
+  first_label: Engineering Constraints
+  second_label: Engineering Refinements
+  supporting_context:
+  - Measured Engineering States
+  - Measured Engineering Improvement
+  engineering_statement: Engineering Constraints direct Engineering Refinements.
+  order: B
+  status: candidate

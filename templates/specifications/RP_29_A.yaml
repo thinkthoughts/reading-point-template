@@ -1,0 +1,44 @@
+identity:
+  notebook_id: NB_29_A_ENGINEERING_CONSTRAINTS
+  reading_point: RP_29
+  stage: A
+  version: 1.1.0
+  status: candidate
+reading_point:
+  inherited_from: NB_23_C_MEASURED_ENGINEERING_STATES
+  natural_foundation: Measured Engineering States
+  engineering_objective: Identify Engineering Constraints.
+  engineering_statements:
+  - Measured Engineering States identify Engineering Constraints.
+  repository_grammar:
+  - Engineering Object specifies Engineering System.
+  - Engineering System produces Measured Engineering States.
+  - Measurement records Measured Engineering States.
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
+  - Measured Engineering Improvement informs Leading Specifications.
+  - Leading Specifications constrain Admissible Generalizations.
+  - Admissible Generalizations support Engineering Understanding.
+  - Engineering Understanding guides Engineering Sessions.
+  - Engineering Sessions produce Engineering Records.
+  - Engineering Records support Engineering Reports.
+  - Engineering Reports support Repository Contributions.
+  - Repository Contributions support Repository Development.
+  - Repository Development supports Continued Specification.
+  - Continued Specification supports Engineering Object.
+  forward_context: Engineering Refinements
+  status: developing
+engineering_object: Microcalorimeter
+engineering_direction: Toward next-generation microcalorimeters.
+footer: Admissible generalizations trail leading specifications.
+dialogue:
+- concept: Engineering Constraints
+  first_label: Measured Engineering States
+  second_label: Engineering Constraints
+  supporting_context:
+  - Engineering System
+  - Engineering Refinements
+  engineering_statement: Measured Engineering States identify Engineering Constraints.
+  order: A
+  status: candidate
