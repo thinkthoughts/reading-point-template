@@ -1,15 +1,16 @@
 identity:
-  notebook_id: NB_19_A_REPOSITORY_CONTRIBUTIONS
+  notebook_id: NB_19_B_REPOSITORY_DEVELOPMENT
   reading_point: RP_19
-  stage: A
+  stage: B
   version: 1.1.0
   status: candidate
 reading_point:
-  inherited_from: NB_17_C_ENGINEERING_REPORTS
-  natural_foundation: Engineering Reports
-  engineering_objective: Support Repository Contributions.
+  inherited_from: NB_19_A_REPOSITORY_CONTRIBUTIONS
+  natural_foundation: Repository Contributions
+  engineering_objective: Support Repository Development.
   engineering_statements:
   - Engineering Reports support Repository Contributions.
+  - Repository Contributions support Repository Development.
   repository_grammar:
   - Engineering Object specifies Engineering System.
   - Engineering System produces Measured Engineering States.
@@ -26,7 +27,7 @@ reading_point:
   - Engineering Reports support Repository Contributions.
   - Repository Contributions support Repository Development.
   - Repository Development supports Continued Specification.
-  forward_context: Repository Development
+  forward_context: Continued Specification
   status: developing
 engineering_object: Microcalorimeter
 engineering_direction: Toward next-generation microcalorimeters.
@@ -40,4 +41,13 @@ dialogue:
   - Engineering Records
   - Repository Development
   engineering_statement: Engineering Reports support Repository Contributions.
+  status: admitted
+- order: B
+  concept: Repository Development
+  first_label: Repository Contributions
+  second_label: Repository Development
+  supporting_context:
+  - Engineering Reports
+  - Continued Specification
+  engineering_statement: Repository Contributions support Repository Development.
   status: candidate
