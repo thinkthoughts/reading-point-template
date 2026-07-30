@@ -1,17 +1,18 @@
 identity:
-  notebook_id: "NB_17_A_ENGINEERING_SESSIONS"
+  notebook_id: "NB_17_B_ENGINEERING_RECORDS"
   reading_point: "RP_17"
-  stage: "A"
+  stage: "B"
   version: "1.1.0"
   status: "candidate"
 
 reading_point:
-  inherited_from: "NB_13_C_ENGINEERING_UNDERSTANDING"
-  natural_foundation: "Engineering Understanding"
-  engineering_objective: "Guide Engineering Sessions."
+  inherited_from: "NB_17_A_ENGINEERING_SESSIONS"
+  natural_foundation: "Engineering Sessions"
+  engineering_objective: "Produce Engineering Records."
 
   engineering_statements:
     - "Engineering Understanding guides Engineering Sessions."
+    - "Engineering Sessions produce Engineering Records."
 
   repository_grammar:
     - "Engineering Object specifies Engineering System."
@@ -27,7 +28,7 @@ reading_point:
     - "Engineering Sessions produce Engineering Records."
     - "Engineering Records support Engineering Reports."
 
-  forward_context: "Engineering Records"
+  forward_context: "Engineering Reports"
   status: "developing"
 
 engineering_object: "Microcalorimeter"
@@ -43,4 +44,14 @@ dialogue:
       - "Admissible Generalizations"
       - "Engineering Questions"
     engineering_statement: "Engineering Understanding guides Engineering Sessions."
+    status: "admitted"
+
+  - order: "B"
+    concept: "Engineering Records"
+    first_label: "Engineering Sessions"
+    second_label: "Engineering Records"
+    supporting_context:
+      - "Engineering Understanding"
+      - "Engineering Reports"
+    engineering_statement: "Engineering Sessions produce Engineering Records."
     status: "candidate"
