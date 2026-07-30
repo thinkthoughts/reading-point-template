@@ -4,70 +4,55 @@ statement:
   id: ES_0004
   title: Leading Specifications
   repository: sensors-becker
+  version: 1.0.0
   status: developing
   initiated: 2026-07
 
 statement_text: >
-  Leading specifications connect engineering objects,
-  engineering paths, measured engineering states,
-  engineering constraints, and engineering refinements.
+  Leading Specifications develop through measured engineering
+  states, engineering constraints, engineering refinements,
+  and measured engineering improvement. Leading Specifications
+  guide continued engineering development through continued
+  specification.
 
 engineering_object:
-  name: cryogenic quantum-sensor development
-  current_specification: microcalorimeter spectroscopy
-
-leading_specifications:
-
-  shared_engineering_object:
-    specification: >
-      Hardware, software, and experimental engineering develop
-      from the shared engineering object.
-
-  measured_engineering_states:
-    specification: >
-      Sensor development advances through measured engineering
-      states supported by specified hardware, software, and
-      experimental conditions.
-
-  connected_engineering_paths:
-    specification: >
-      Refinements within one engineering path may support
-      refinements across additional engineering paths.
-
-  continued_specification:
-    specification: >
-      Current leading specifications support additional
-      engineering questions, engineering measurements,
-      and engineering development.
+  name: Cryogenic Quantum-Sensor Development
+  current_specification: Microcalorimeter Spectroscopy
 
 engineering_relationships:
 
-  connects:
-    - engineering_objects
-    - engineering_paths
-    - measured_engineering_states
+  informed_by:
+    - Measured Engineering Improvement
 
   constrains:
-    - engineering_constraints
-    - engineering_refinements
+    - Admissible Generalizations
 
   supports:
-    - hardware_engineering
-    - software_engineering
-    - experimental_engineering
-    - continued_engineering_development
+    - Engineering Understanding
+    - Engineering Comparison
+    - Continued Engineering Refinement
+
+leading_specification_sequence:
+
+  - Engineering Object
+  - Engineering System
+  - Measured Engineering States
+  - Engineering Constraints
+  - Engineering Refinements
+  - Measured Engineering Improvement
+  - Leading Specifications
 
 development:
 
   current:
-    - identify leading specifications
-    - connect engineering paths
-    - prepare engineering questions
+    - Specify Leading Specifications
+    - Relate Measured Engineering Improvement
+    - Support Engineering Understanding
 
   next:
-    - specify measured engineering states
-    - identify engineering constraints
-    - identify engineering refinements
+    - Refine Leading Specifications
+    - Support Additional Reading Points
+    - Support Continued Engineering Development
 
 references:
   - ES_0000_ENGINEERING_STATEMENTS.md
@@ -75,8 +60,6 @@ references:
   - ES_0002_ENGINEERING_OBJECT.yaml
   - ES_0003_ENGINEERING_PATHS.yaml
 
-  - RO_B_ENGINEERING_OBJECT_MAP.md
-  - RO_C_ENGINEERING_PATHS.md
   - RO_E_ENGINEERING_SYSTEM_MAP.md
   - RO_F_MEASURED_ENGINEERING_STATES.md
   - RO_G_ENGINEERING_CONSTRAINTS.md
