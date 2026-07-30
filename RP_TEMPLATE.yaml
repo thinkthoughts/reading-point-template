@@ -1,0 +1,35 @@
+identity:
+  notebook_id: NB_11_A_ENGINEERING_CONSTRAINTS
+  reading_point: RP_11
+  stage: A
+
+reading_point:
+
+  natural_foundation:
+    Measured Engineering States
+
+  engineering_objective:
+    Identify Engineering Constraints.
+
+  engineering_statements:
+
+    - Measured Engineering States identify Engineering Constraints.
+
+dialogue:
+
+  - order: A
+
+    first_label:
+      Measured Engineering States
+
+    second_label:
+      Engineering Constraints
+
+    supporting_context:
+
+      - Engineering System
+
+      - Engineering Refinements
+
+    engineering_statement:
+      Measured Engineering States identify Engineering Constraints.
