@@ -2,77 +2,143 @@
 
 ## Engineering Purpose
 
-This document specifies the engineering object developed within this repository. It establishes an initial path from a general engineering object toward increasingly specified engineering work through continued specification.
+This document specifies the Engineering Object through increasing specification.
+
+Engineering Objects develop from general engineering intent toward technically meaningful engineering systems through continued specification.
+
+---
 
 ## Engineering Object
 
 ```text
-Sensor development
+Sensor Development
         │
         ▼
-Quantum sensing
+Quantum Sensing
         │
         ▼
-Cryogenic sensing
+Cryogenic Sensing
         │
         ▼
-Superconducting detectors
+Superconducting Detectors
         │
         ▼
-Transition-edge sensing
+Transition-Edge Sensing
         │
         ▼
-Microcalorimeter spectroscopy
+Microcalorimeter Spectroscopy
 ```
 
-Each level specifies the engineering object more precisely than the previous level.
+Each level specifies the Engineering Object more precisely than the previous level.
 
-The map specifies the current engineering context while supporting continued refinement through additional leading specifications.
-
-## Engineering Paths
-
-Once the engineering object reaches sufficient specification, engineering may proceed along multiple engineering paths.
-
-```text
-Microcalorimeter spectroscopy
-             │
-      ┌──────┴──────┐
-      │             │
-Hardware      Software
-Engineering   Engineering
-```
-
-Each engineering path develops from the shared engineering object.
-
-### Hardware Engineering
-
-* Sensor materials
-* Detector architecture
-* Transition-edge sensor fabrication
-* Cryogenic integration
-* Readout electronics
-* Packaging
-* Calibration hardware
-
-### Software Engineering
-
-* Instrument control
-* Data acquisition
-* Signal processing
-* Calibration
-* Data analysis
-* Experiment provenance
-* Visualization
-* Automation
-
-These engineering paths develop through additional leading specifications as the repository evolves.
-
-## Repository Context
-
-This repository supports technical collaboration related to the work of Daniel Becker beginning in July 2026.
-
-Future specifications may refine the engineering object, engineering paths, and leading specifications while preserving the repository's engineering purpose.
+The Engineering Object supports continued engineering development through increasing specification.
 
 ---
 
-**Engineering objects develop through specification. Engineering paths develop through leading specifications.**
+## Engineering Specification
+
+Engineering specification develops through increasing technical specificity.
+
+```text
+Engineering Object
+        │
+        ▼
+Engineering System
+        │
+        ▼
+Measured Engineering States
+        │
+        ▼
+Engineering Constraints
+        │
+        ▼
+Engineering Refinements
+        │
+        ▼
+Measured Engineering Improvement
+        │
+        ▼
+Leading Specifications
+```
+
+Engineering Objects support continued engineering understanding through this progression.
+
+---
+
+## Current Engineering Object
+
+Current Engineering Object:
+
+```text
+Microcalorimeter Spectroscopy
+```
+
+Current engineering work develops:
+
+- Engineering System
+- Measured Engineering States
+- Engineering Constraints
+- Engineering Refinements
+- Measured Engineering Improvement
+- Leading Specifications
+
+Additional engineering specification develops through continued engineering work.
+
+---
+
+## Engineering Relationships
+
+Engineering Objects support the following engineering relationships.
+
+```text
+Engineering Object
+        │
+        ▼
+Engineering System
+        │
+        ▼
+Measured Engineering States
+        │
+        ▼
+Engineering Constraints
+        │
+        ▼
+Engineering Refinements
+```
+
+Engineering Objects support continued engineering specification rather than isolated engineering activities.
+
+---
+
+## Leading Engineering Questions
+
+Current leading engineering questions include:
+
+- Which Engineering System best represents the current Engineering Object?
+- Which measured engineering states characterize the current Engineering Object?
+- Which engineering constraints currently limit the Engineering Object?
+- Which engineering refinements most directly improve the Engineering Object?
+
+Additional leading engineering questions develop through continued engineering work.
+
+---
+
+## Engineering Development
+
+Engineering Objects support:
+
+- engineering understanding
+- engineering systems
+- measured engineering states
+- engineering constraints
+- engineering refinements
+- measured engineering improvement
+- leading specifications
+
+Engineering Objects support continued engineering specification.
+
+---
+
+*Engineering Objects support Engineering Systems through continued specification.*
+
+*Admissible generalizations trail leading specifications.*
