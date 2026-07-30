@@ -4,58 +4,67 @@ statement:
   id: ES_0001
   title: Sensor Development
   repository: sensors-becker
+  version: 1.0.0
   status: developing
   initiated: 2026-07
 
 statement_text: >
   Sensor development specifies cryogenic quantum-sensor
-  development through measurable engineering states,
-  engineering constraints, and engineering refinements.
+  development through measured engineering states,
+  engineering constraints, engineering refinements,
+  and leading specifications.
 
 engineering_object:
-  name: sensor development
-  current_specification: cryogenic quantum-sensor development
+  name: Sensor Development
+  current_specification: Cryogenic Quantum-Sensor Development
 
 object_sequence:
-  - sensor development
-  - quantum sensing
-  - cryogenic sensing
-  - superconducting detectors
-  - transition-edge sensing
-  - microcalorimeter spectroscopy
+  - Sensor Development
+  - Quantum Sensing
+  - Cryogenic Sensing
+  - Superconducting Detectors
+  - Transition-Edge Sensing
+  - Microcalorimeter Spectroscopy
 
 engineering_relationships:
 
-  develops:
-    - engineering_system
-    - engineering_paths
+  specifies:
+    - Engineering System
+
+  produces:
+    - Measured Engineering States
+
+  identifies:
+    - Engineering Constraints
+
+  directs:
+    - Engineering Refinements
 
   supports:
-    - measured_engineering_states
-    - engineering_constraints
-    - engineering_refinements
-    - leading_specifications
+    - Measured Engineering Improvement
+
+  informs:
+    - Leading Specifications
 
 engineering_paths:
-  - hardware engineering
-  - software engineering
-  - experimental engineering
+  - Hardware Engineering
+  - Software Engineering
+  - Experimental Engineering
 
 development:
 
   current:
-    - specify engineering object
-    - specify engineering system
-    - identify measured engineering states
+    - Specify Engineering Object
+    - Specify Engineering System
+    - Record Measured Engineering States
 
   next:
-    - identify engineering constraints
-    - identify engineering refinements
-    - prepare engineering session
+    - Identify Engineering Constraints
+    - Develop Engineering Refinements
+    - Measure Engineering Improvement
 
 references:
   - ES_0000_ENGINEERING_STATEMENTS.md
-
   - RO_B_ENGINEERING_OBJECT_MAP.md
   - RO_C_ENGINEERING_PATHS.md
   - RO_D_REPOSITORY_CONTEXT.md
