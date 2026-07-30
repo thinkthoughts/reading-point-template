@@ -1,6 +1,10 @@
 # sensors-becker
 
-This engineering repository identifies leading specifications for cryogenic quantum-sensor development in preparation for collaboration with Daniel Becker (July 2026).
+This repository specifies cryogenic quantum-sensor engineering activities.
+
+Engineering development is organized through Reading Points that compile into engineering notebook bundles.
+
+---
 
 ## Engineering Purpose
 
@@ -9,20 +13,16 @@ This repository develops engineering understanding through continued specificati
 Current engineering development emphasizes:
 
 - engineering objects
-- engineering paths
+- engineering systems
+- measured engineering states
+- engineering constraints
+- engineering refinements
+- measured engineering improvement
 - leading specifications
-- engineering sessions
-- continued engineering refinement
 
 Repository development begins with engineering understanding before implementation.
 
-## Engineering Audience
-
-Primary engineering audience:
-
-- Daniel Becker
-
-Additional engineering audiences may develop through continued collaboration.
+---
 
 ## Engineering Context
 
@@ -47,70 +47,109 @@ Transition-edge sensing
 Microcalorimeter spectroscopy
 ```
 
-Additional engineering context develops through continued specification.
+Current engineering work prepares technically meaningful collaboration through continued specification.
 
-## Engineering Objective
+---
 
-Develop engineering understanding that supports technically meaningful collaboration through leading specifications.
+## Repository Foundations
 
-Current engineering work emphasizes:
+Repository comprehension develops through four engineering foundations.
 
-- engineering object specification
-- engineering path specification
-- measurable engineering questions
-- candidate engineering refinements
-- continued engineering development
+### Reading Order
 
-## Engineering Reading Order
+`RO.md`
 
-Repository comprehension develops through the Reading Order.
+Defines repository comprehension.
 
-**A — Reading Order**  
-`RO_A_READING_ORDER.md`
+### Engineering Statements
 
-**B — Engineering Object Map**  
-`RO_B_ENGINEERING_OBJECT_MAP.md`
+`ES.md`
 
-**C — Engineering Paths**  
-`RO_C_ENGINEERING_PATHS.md`
+Defines repository engineering language.
 
-**D — Repository Context**  
-`RO_D_REPOSITORY_CONTEXT.md`
+### Notebook Compiler
 
-**E — Engineering Statements**  
-`ES_ENGINEERING_STATEMENTS.md`
+`NB_TEMPLATE.md`
 
-**F — Notebook 00**  
-`NB_00_ENGINEERING_CONTEXT.ipynb`
+Defines the Reading Point compiler.
 
-**G — Session Reports**
+### Reading Point Specification
 
-Reading Order documents support repository comprehension.
+`RP_TEMPLATE.md`
+
+Defines Reading Point engineering specifications.
+
+---
+
+## Repository Workflow
+
+```text
+Reading Order
+        ↓
+Engineering Statements
+        ↓
+Reading Point Specification
+        ↓
+NB_TEMPLATE
+        ↓
+Notebook Bundle
+```
+
+---
 
 ## Repository Structure
 
-Current engineering artifact types include:
+```text
+templates/
+    NB_TEMPLATE.ipynb
+    RP_TEMPLATE.yaml
+    dialogue_renderer.py
 
-| Artifact | Purpose |
-|----------|---------|
-| **RO** | Reading Order |
-| **ES** | Engineering Statement |
-| **NB** | Notebook |
-| **SR** | Session Report |
-| **ER** | Engineering Report |
+specifications/
 
-Additional engineering artifacts develop through continued repository engineering.
+notebooks/
+
+reports/
+```
+
+---
+
+## Generated Notebook Bundle
+
+Each Reading Point produces:
+
+- engineering dialogue figures
+- accessibility text
+- README
+- notebook metadata
+- notebook manifest
+- release bundle
+
+---
+
+## Engineering Audience
+
+Primary engineering audience:
+
+- Daniel Becker
+
+Additional engineering audiences develop through continued engineering collaboration.
+
+---
 
 ## Current Repository Status
 
-Current repository development includes:
+Current repository includes:
 
-- repository identity
-- engineering reading order
-- Engineering Statement specification
-- initial Engineering Statements
+- Reading Order
+- Engineering Statements
+- Notebook compiler
+- Reading Point specification
+- Generated notebook bundles
 
-Current engineering work supports continued specification before implementation.
+Current engineering work develops additional Reading Points through continued specification.
+
+---
 
 ## Contact
 
@@ -119,7 +158,5 @@ Current engineering work supports continued specification before implementation.
 Text: **303.898.3295**
 
 ---
-
-*Engineering repositories develop through specification.*
 
 *Admissible generalizations trail leading specifications.*
