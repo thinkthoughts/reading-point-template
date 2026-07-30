@@ -1,0 +1,39 @@
+identity:
+  notebook_id: "NB_19_B_REPOSITORY_DEVELOPMENT"
+  reading_point: "RP_19"
+  version: "1.0.0"
+  status: "candidate"
+
+reading_point:
+  inherited_from: "NB_19_A_REPOSITORY_CONTRIBUTIONS"
+  engineering_statements:
+    - "Engineering Reports support Repository Contributions."
+    - "Repository Contributions support Repository Development."
+  repository_grammar:
+    - "Engineering Object specifies Engineering System."
+    - "Engineering System produces Measured Engineering States."
+    - "Measured Engineering States identify Engineering Constraints."
+    - "Engineering Constraints direct Engineering Refinements."
+    - "Engineering Refinements support Measured Engineering Improvement."
+    - "Measured Engineering Improvement informs Leading Specifications."
+    - "Leading Specifications constrain Admissible Generalizations."
+    - "Admissible Generalizations support Engineering Understanding."
+    - "Engineering Understanding guides Engineering Sessions."
+    - "Engineering Sessions produce Engineering Records."
+    - "Engineering Records support Engineering Reports."
+    - "Engineering Reports support Repository Contributions."
+    - "Repository Contributions support Repository Development."
+    - "Repository Development supports Continued Specification."
+  forward_context: "Continued Specification"
+
+dialogue:
+  first_label: "Repository Contributions"
+  second_label: "Repository Development"
+  supporting_context:
+    - "Engineering Reports"
+    - "Engineering Sessions"
+
+engineering_object: "Microcalorimeter"
+engineering_direction: "Toward next-generation microcalorimeters."
+
+footer: "Admissible generalizations trail leading specifications."
