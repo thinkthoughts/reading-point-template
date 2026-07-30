@@ -1,0 +1,65 @@
+identity:
+  notebook_id: "NB_13_C_ENGINEERING_UNDERSTANDING"
+  reading_point: "RP_13"
+  stage: "C"
+  version: "1.1.0"
+  status: "candidate"
+
+reading_point:
+  inherited_from: "NB_13_B_ADMISSIBLE_GENERALIZATIONS"
+  natural_foundation: "Admissible Generalizations"
+  engineering_objective: "Support Engineering Understanding."
+
+  engineering_statements:
+    - "Measured Engineering Improvement informs Leading Specifications."
+    - "Leading Specifications constrain Admissible Generalizations."
+    - "Admissible Generalizations support Engineering Understanding."
+
+  repository_grammar:
+    - "Engineering Object specifies Engineering System."
+    - "Engineering System produces Measured Engineering States."
+    - "Measurement records Measured Engineering States."
+    - "Measured Engineering States identify Engineering Constraints."
+    - "Engineering Constraints direct Engineering Refinements."
+    - "Engineering Refinements support Measured Engineering Improvement."
+    - "Measured Engineering Improvement informs Leading Specifications."
+    - "Leading Specifications constrain Admissible Generalizations."
+    - "Admissible Generalizations support Engineering Understanding."
+
+  forward_context: "Engineering Object"
+  status: "complete"
+
+engineering_object: "Microcalorimeter"
+engineering_direction: "Toward next-generation microcalorimeters."
+footer: "Admissible generalizations trail leading specifications."
+
+dialogue:
+  - order: "A"
+    concept: "Leading Specifications"
+    first_label: "Measured Engineering Improvement"
+    second_label: "Leading Specifications"
+    supporting_context:
+      - "Engineering Refinements"
+      - "Admissible Generalizations"
+    engineering_statement: "Measured Engineering Improvement informs Leading Specifications."
+    status: "admitted"
+
+  - order: "B"
+    concept: "Admissible Generalizations"
+    first_label: "Leading Specifications"
+    second_label: "Admissible Generalizations"
+    supporting_context:
+      - "Measured Engineering Improvement"
+      - "Engineering Understanding"
+    engineering_statement: "Leading Specifications constrain Admissible Generalizations."
+    status: "admitted"
+
+  - order: "C"
+    concept: "Engineering Understanding"
+    first_label: "Admissible Generalizations"
+    second_label: "Engineering Understanding"
+    supporting_context:
+      - "Leading Specifications"
+      - "Engineering Sessions"
+    engineering_statement: "Admissible Generalizations support Engineering Understanding."
+    status: "candidate"

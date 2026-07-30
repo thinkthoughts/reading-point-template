@@ -1,0 +1,43 @@
+identity:
+  notebook_id: "NB_13_A_LEADING_SPECIFICATIONS"
+  reading_point: "RP_13"
+  stage: "A"
+  version: "1.1.0"
+  status: "candidate"
+
+reading_point:
+  inherited_from: "NB_11_C_MEASURED_ENGINEERING_IMPROVEMENT"
+  natural_foundation: "Measured Engineering Improvement"
+  engineering_objective: "Develop Leading Specifications."
+
+  engineering_statements:
+    - "Measured Engineering Improvement informs Leading Specifications."
+
+  repository_grammar:
+    - "Engineering Object specifies Engineering System."
+    - "Engineering System produces Measured Engineering States."
+    - "Measurement records Measured Engineering States."
+    - "Measured Engineering States identify Engineering Constraints."
+    - "Engineering Constraints direct Engineering Refinements."
+    - "Engineering Refinements support Measured Engineering Improvement."
+    - "Measured Engineering Improvement informs Leading Specifications."
+    - "Leading Specifications constrain Admissible Generalizations."
+    - "Admissible Generalizations support Engineering Understanding."
+
+  forward_context: "Admissible Generalizations"
+  status: "developing"
+
+engineering_object: "Microcalorimeter"
+engineering_direction: "Toward next-generation microcalorimeters."
+footer: "Admissible generalizations trail leading specifications."
+
+dialogue:
+  - order: "A"
+    concept: "Leading Specifications"
+    first_label: "Measured Engineering Improvement"
+    second_label: "Leading Specifications"
+    supporting_context:
+      - "Engineering Refinements"
+      - "Admissible Generalizations"
+    engineering_statement: "Measured Engineering Improvement informs Leading Specifications."
+    status: "candidate"
