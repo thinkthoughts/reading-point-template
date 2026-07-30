@@ -4,120 +4,94 @@ statement:
   id: ES_0005
   title: Engineering Session
   repository: sensors-becker
+  version: 1.0.0
   status: developing
   initiated: 2026-07
 
 statement_text: >
-  Engineering sessions develop engineering understanding through
-  focused engineering questions, technical observations,
-  leading specifications, and specified next steps.
+  Engineering Sessions apply repository engineering grammar
+  through engineering questions, engineering observation,
+  measured engineering states, engineering constraints,
+  engineering refinements, and leading specifications.
 
 engineering_object:
-  name: cryogenic quantum-sensor development
-  current_specification: microcalorimeter spectroscopy
+  name: Cryogenic Quantum-Sensor Development
+  current_specification: Microcalorimeter Spectroscopy
 
 engineering_session:
 
-  type: initial repository engineering
+  purpose: >
+    Apply repository engineering grammar to develop
+    engineering understanding through continued specification.
 
-  context: >
-    Develop an initial engineering scaffold related to
-    cryogenic quantum-sensor development.
+  engineering_progression:
 
-  current_focus:
-    - specify the engineering object
-    - specify the engineering system
-    - identify measured engineering states
-    - identify engineering constraints
-    - identify engineering refinements
-    - prepare technically meaningful collaboration
+    - Engineering Object
+    - Engineering System
+    - Measured Engineering States
+    - Engineering Constraints
+    - Engineering Refinements
+    - Measured Engineering Improvement
+    - Leading Specifications
 
 session_inputs:
 
-  - seminar discussions
-  - publicly available research context
-  - engineering object map
-  - engineering system map
-  - measured engineering states
-  - engineering constraints
-  - engineering refinements
+  - Engineering Object
+  - Engineering System
+  - Measured Engineering States
+  - Engineering Constraints
   - Engineering Statements
+  - Reading Points
+  - Public Research
+  - Seminar Discussions
 
 engineering_questions:
 
-  - question: >
-      Which engineering system currently provides the
-      greatest opportunity for continued specification?
-    state: open
+  - Which measured engineering states currently characterize the engineering system?
 
-  - question: >
-      Which measured engineering states currently constrain
-      engineering development?
-    state: open
+  - Which engineering constraints currently limit engineering performance?
 
-  - question: >
-      Which engineering refinements could most effectively
-      improve those measured engineering states?
-    state: open
+  - Which engineering refinements most directly address those constraints?
 
-  - question: >
-      Which engineering contribution could complement
-      Daniel Becker's existing expertise and laboratory
-      capabilities?
-    state: open
+  - Which measured engineering improvements inform leading specifications?
 
 engineering_outputs:
 
-  specified:
-    - repository identity
-    - engineering object
-    - engineering paths
-    - engineering system
-    - measured engineering states
-    - engineering constraints
-    - engineering refinements
-    - Engineering Statement convention
-
-  developing:
-    - engineering priorities
-    - Notebook 00
-    - engineering session reports
-    - engineering reports
-    - collaboration opportunities
+  - Engineering Observations
+  - Measured Engineering States
+  - Engineering Constraints
+  - Engineering Refinements
+  - Measured Engineering Improvement
+  - Leading Specifications
+  - Reading Point Candidates
 
 engineering_relationships:
 
-  develops:
-    - engineering understanding
-    - leading specifications
-    - engineering questions
-    - specified next steps
+  applies:
+    - Engineering Statements
 
-  connects:
-    - engineering objects
-    - engineering systems
-    - engineering paths
-    - measured engineering states
-    - engineering constraints
-    - engineering refinements
+  develops:
+    - Engineering Understanding
+
+  identifies:
+    - Engineering Constraints
 
   supports:
-    - continued repository development
-    - Engineering Statements
-    - engineering notebooks
-    - session reports
-    - engineering reports
+    - Engineering Refinements
+    - Measured Engineering Improvement
+
+  informs:
+    - Leading Specifications
 
 development:
 
   current:
-    - complete repository specification layer
-    - prepare Notebook 00
+    - Apply Repository Grammar
+    - Record Engineering Observations
 
   next:
-    - initialize Notebook 00
-    - conduct engineering sessions
-    - develop engineering reports
+    - Generate Reading Points
+    - Generate Notebook Bundles
 
 references:
   - ES_0000_ENGINEERING_STATEMENTS.md
