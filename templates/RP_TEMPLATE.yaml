@@ -1,19 +1,18 @@
 identity:
-  notebook_id: "NB_13_C_ENGINEERING_UNDERSTANDING"
+  notebook_id: "NB_13_B_ADMISSIBLE_GENERALIZATIONS"
   reading_point: "RP_13"
-  stage: "C"
+  stage: "B"
   version: "1.1.0"
   status: "candidate"
 
 reading_point:
-  inherited_from: "NB_13_B_ADMISSIBLE_GENERALIZATIONS"
-  natural_foundation: "Admissible Generalizations"
-  engineering_objective: "Support Engineering Understanding."
+  inherited_from: "NB_13_A_LEADING_SPECIFICATIONS"
+  natural_foundation: "Leading Specifications"
+  engineering_objective: "Constrain Admissible Generalizations."
 
   engineering_statements:
     - "Measured Engineering Improvement informs Leading Specifications."
     - "Leading Specifications constrain Admissible Generalizations."
-    - "Admissible Generalizations support Engineering Understanding."
 
   repository_grammar:
     - "Engineering Object specifies Engineering System."
@@ -26,8 +25,8 @@ reading_point:
     - "Leading Specifications constrain Admissible Generalizations."
     - "Admissible Generalizations support Engineering Understanding."
 
-  forward_context: "Engineering Object"
-  status: "complete"
+  forward_context: "Engineering Understanding"
+  status: "developing"
 
 engineering_object: "Microcalorimeter"
 engineering_direction: "Toward next-generation microcalorimeters."
@@ -52,14 +51,4 @@ dialogue:
       - "Measured Engineering Improvement"
       - "Engineering Understanding"
     engineering_statement: "Leading Specifications constrain Admissible Generalizations."
-    status: "admitted"
-
-  - order: "C"
-    concept: "Engineering Understanding"
-    first_label: "Admissible Generalizations"
-    second_label: "Engineering Understanding"
-    supporting_context:
-      - "Leading Specifications"
-      - "Engineering Sessions"
-    engineering_statement: "Admissible Generalizations support Engineering Understanding."
     status: "candidate"
