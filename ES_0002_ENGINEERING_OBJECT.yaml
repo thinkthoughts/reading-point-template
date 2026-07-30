@@ -4,55 +4,61 @@ statement:
   id: ES_0002
   title: Engineering Object
   repository: sensors-becker
+  version: 1.0.0
   status: developing
   initiated: 2026-07
 
 statement_text: >
-  Engineering objects develop through increasing specification.
-  Object sequences support engineering systems, engineering paths,
-  measured engineering states, engineering constraints, and
-  engineering refinements.
+  Engineering Objects specify Engineering Systems through
+  continued specification. Increasing object specification
+  supports measured engineering states, engineering constraints,
+  engineering refinements, and leading specifications.
 
 engineering_object:
-  name: sensor development
-  current_specification: cryogenic quantum-sensor development
+  name: Sensor Development
+  current_specification: Cryogenic Quantum-Sensor Development
 
 object_sequence:
-  - sensor development
-  - quantum sensing
-  - cryogenic sensing
-  - superconducting detectors
-  - transition-edge sensing
-  - microcalorimeter spectroscopy
+  - Sensor Development
+  - Quantum Sensing
+  - Cryogenic Sensing
+  - Superconducting Detectors
+  - Transition-Edge Sensing
+  - Microcalorimeter Spectroscopy
 
 engineering_relationships:
 
   specifies:
-    - object_sequence
+    - Engineering System
 
-  develops:
-    - engineering_system
+  produces:
+    - Measured Engineering States
+
+  identifies:
+    - Engineering Constraints
+
+  directs:
+    - Engineering Refinements
 
   supports:
-    - engineering_paths
-    - measured_engineering_states
-    - engineering_constraints
-    - engineering_refinements
+    - Measured Engineering Improvement
+
+  informs:
+    - Leading Specifications
 
 development:
 
   current:
-    - specify engineering object
-    - refine object sequence
+    - Specify Engineering Object
+    - Refine Object Sequence
 
   next:
-    - specify engineering system
-    - identify measured engineering states
-    - identify engineering constraints
+    - Specify Engineering System
+    - Record Measured Engineering States
+    - Identify Engineering Constraints
 
 references:
   - ES_0000_ENGINEERING_STATEMENTS.md
-
   - RO_B_ENGINEERING_OBJECT_MAP.md
   - RO_C_ENGINEERING_PATHS.md
   - RO_E_ENGINEERING_SYSTEM_MAP.md
