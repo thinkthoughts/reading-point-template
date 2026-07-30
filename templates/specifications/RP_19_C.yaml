@@ -1,40 +1,63 @@
 identity:
-  notebook_id: "NB_19_C_CONTINUED_SPECIFICATION"
-  reading_point: "RP_19"
-  version: "1.0.0"
-  status: "complete"
-
+  notebook_id: NB_19_C_CONTINUED_SPECIFICATION
+  reading_point: RP_19
+  stage: C
+  version: 1.1.0
+  status: candidate
 reading_point:
-  inherited_from: "NB_19_B_REPOSITORY_DEVELOPMENT"
+  inherited_from: NB_19_B_REPOSITORY_DEVELOPMENT
+  natural_foundation: Repository Development
+  engineering_objective: Support Continued Specification.
   engineering_statements:
-    - "Engineering Reports support Repository Contributions."
-    - "Repository Contributions support Repository Development."
-    - "Repository Development supports Continued Specification."
+  - Engineering Reports support Repository Contributions.
+  - Repository Contributions support Repository Development.
+  - Repository Development supports Continued Specification.
   repository_grammar:
-    - "Engineering Object specifies Engineering System."
-    - "Engineering System produces Measured Engineering States."
-    - "Measured Engineering States identify Engineering Constraints."
-    - "Engineering Constraints direct Engineering Refinements."
-    - "Engineering Refinements support Measured Engineering Improvement."
-    - "Measured Engineering Improvement informs Leading Specifications."
-    - "Leading Specifications constrain Admissible Generalizations."
-    - "Admissible Generalizations support Engineering Understanding."
-    - "Engineering Understanding guides Engineering Sessions."
-    - "Engineering Sessions produce Engineering Records."
-    - "Engineering Records support Engineering Reports."
-    - "Engineering Reports support Repository Contributions."
-    - "Repository Contributions support Repository Development."
-    - "Repository Development supports Continued Specification."
-  forward_context: "Engineering Object"
-
+  - Engineering Object specifies Engineering System.
+  - Engineering System produces Measured Engineering States.
+  - Measurement records Measured Engineering States.
+  - Measured Engineering States identify Engineering Constraints.
+  - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
+  - Measured Engineering Improvement informs Leading Specifications.
+  - Leading Specifications constrain Admissible Generalizations.
+  - Admissible Generalizations support Engineering Understanding.
+  - Engineering Understanding guides Engineering Sessions.
+  - Engineering Sessions produce Engineering Records.
+  - Engineering Records support Engineering Reports.
+  - Engineering Reports support Repository Contributions.
+  - Repository Contributions support Repository Development.
+  - Repository Development supports Continued Specification.
+  forward_context: Engineering Object
+  status: complete
+engineering_object: Microcalorimeter
+engineering_direction: Toward next-generation microcalorimeters.
+footer: Admissible generalizations trail leading specifications.
 dialogue:
-  first_label: "Repository Development"
-  second_label: "Continued Specification"
+- order: A
+  concept: Repository Contributions
+  first_label: Engineering Reports
+  second_label: Repository Contributions
   supporting_context:
-    - "Repository Contributions"
-    - "Leading Specifications"
-
-engineering_object: "Microcalorimeter"
-engineering_direction: "Toward next-generation microcalorimeters."
-
-footer: "Admissible generalizations trail leading specifications."
+  - Engineering Records
+  - Repository Development
+  engineering_statement: Engineering Reports support Repository Contributions.
+  status: admitted
+- order: B
+  concept: Repository Development
+  first_label: Repository Contributions
+  second_label: Repository Development
+  supporting_context:
+  - Engineering Reports
+  - Continued Specification
+  engineering_statement: Repository Contributions support Repository Development.
+  status: admitted
+- order: C
+  concept: Continued Specification
+  first_label: Repository Development
+  second_label: Continued Specification
+  supporting_context:
+  - Repository Contributions
+  - Engineering Object
+  engineering_statement: Repository Development supports Continued Specification.
+  status: candidate
