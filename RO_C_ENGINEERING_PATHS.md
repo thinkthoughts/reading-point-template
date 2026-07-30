@@ -2,106 +2,155 @@
 
 ## Engineering Purpose
 
-This document specifies the engineering paths that develop from the repository's engineering object. Each path supports continued refinement through additional leading specifications while remaining connected through the shared engineering object.
+This document specifies the Engineering Paths that develop from a shared Engineering Object.
+
+Engineering Paths support continued engineering development through coordinated hardware, software, and experimental engineering activities.
+
+---
 
 ## Shared Engineering Object
 
+Current Engineering Object:
+
 ```text
-Sensor development
-        │
-        ▼
-Quantum sensing
-        │
-        ▼
-Cryogenic sensing
-        │
-        ▼
-Superconducting detectors
-        │
-        ▼
-Transition-edge sensing
-        │
-        ▼
-Microcalorimeter spectroscopy
+Microcalorimeter Spectroscopy
 ```
 
-The shared engineering object supports multiple engineering paths.
+Engineering Paths develop from this shared Engineering Object while contributing to a common Engineering System.
+
+---
 
 ## Engineering Paths
 
 ```text
-Microcalorimeter spectroscopy
-             │
-     ┌───────┼────────┐
-     │       │        │
- Hardware  Software  Experimental
+Engineering Object
+        │
+        ▼
+Engineering System
+        │
+        ▼
+ ┌──────┼────────┐
+ │      │        │
+ ▼      ▼        ▼
+Hardware Software Experimental
 Engineering Engineering Engineering
+        │
+        └──────┬──────┘
+               ▼
+Measured Engineering States
 ```
 
-Additional engineering paths may be specified as the repository develops.
-
-## Hardware Engineering
-
-Hardware Engineering specifies the physical systems that support sensing.
-
-Initial engineering topics include:
-
-* Sensor materials
-* Detector architecture
-* Transition-edge sensor fabrication
-* Cryogenic integration
-* Readout electronics
-* Packaging
-* Calibration hardware
-
-Additional hardware specifications develop through continued engineering work.
-
-## Software Engineering
-
-Software Engineering specifies the computational systems that support sensing.
-
-Initial engineering topics include:
-
-* Instrument control
-* Data acquisition
-* Signal processing
-* Calibration
-* Data analysis
-* Experiment provenance
-* Visualization
-* Automation
-
-Additional software specifications develop through continued engineering work.
-
-## Experimental Engineering
-
-Experimental Engineering specifies the engineering activities that connect hardware and software through measurable observations.
-
-Initial engineering topics include:
-
-* Experimental design
-* Measurement procedures
-* Environmental control
-* Sensor characterization
-* Calibration procedures
-* Repeatability
-* Performance evaluation
-* Engineering reports
-
-Additional experimental specifications develop through continued engineering work.
-
-## Engineering Relationships
-
-The engineering paths share a common engineering object while supporting distinct engineering activities.
-
-Leading specifications developed within one engineering path may support refinement across additional engineering paths.
-
-## Repository Development
-
-This repository develops by refining engineering paths rather than separating them.
-
-Each engineering path contributes additional leading specifications that support the continued development of the shared engineering object.
+Engineering Paths remain connected through a shared Engineering System.
 
 ---
 
-**Engineering paths develop through shared engineering objects. Shared engineering objects develop through leading specifications.**
+## Hardware Engineering
+
+Hardware Engineering develops the physical engineering systems.
+
+Current engineering activities include:
+
+- sensor materials
+- detector architecture
+- transition-edge sensor fabrication
+- cryogenic integration
+- readout electronics
+- detector packaging
+- calibration hardware
+
+Additional hardware engineering develops through continued specification.
+
+---
+
+## Software Engineering
+
+Software Engineering develops the computational engineering systems.
+
+Current engineering activities include:
+
+- instrument control
+- data acquisition
+- signal processing
+- calibration
+- data analysis
+- visualization
+- automation
+
+Additional software engineering develops through continued specification.
+
+---
+
+## Experimental Engineering
+
+Experimental Engineering develops engineering measurement and validation.
+
+Current engineering activities include:
+
+- experimental design
+- measurement procedures
+- environmental control
+- sensor characterization
+- calibration procedures
+- experimental repeatability
+- performance evaluation
+- engineering reporting
+
+Additional experimental engineering develops through continued specification.
+
+---
+
+## Engineering Relationships
+
+Engineering Paths support the following engineering progression.
+
+```text
+Engineering Object
+        │
+        ▼
+Engineering System
+        │
+        ▼
+Measured Engineering States
+        │
+        ▼
+Engineering Constraints
+        │
+        ▼
+Engineering Refinements
+```
+
+Engineering Paths contribute coordinated engineering activities rather than isolated engineering development.
+
+---
+
+## Leading Engineering Questions
+
+Current leading engineering questions include:
+
+- Which Engineering Path currently contributes the greatest engineering understanding?
+- Which Engineering Path most directly supports measured engineering states?
+- Which Engineering Path currently identifies the greatest engineering constraints?
+- Which Engineering Path most effectively supports engineering refinements?
+
+Additional leading engineering questions develop through continued engineering work.
+
+---
+
+## Engineering Development
+
+Engineering Paths support:
+
+- engineering systems
+- measured engineering states
+- engineering constraints
+- engineering refinements
+- measured engineering improvement
+- leading specifications
+
+Engineering Paths support continued engineering specification.
+
+---
+
+*Engineering Paths support coordinated Engineering Systems.*
+
+*Admissible generalizations trail leading specifications.*
