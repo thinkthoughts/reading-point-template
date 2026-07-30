@@ -1,16 +1,17 @@
 identity:
-  notebook_id: NB_11_B_ENGINEERING_REFINEMENTS
+  notebook_id: NB_11_C_MEASURED_ENGINEERING_IMPROVEMENT
   reading_point: RP_11
-  stage: B
+  stage: C
   version: 1.1.0
   status: candidate
 reading_point:
-  inherited_from: NB_11_A_ENGINEERING_CONSTRAINTS
-  natural_foundation: Engineering Constraints
-  engineering_objective: Develop Engineering Refinements.
+  inherited_from: NB_11_B_ENGINEERING_REFINEMENTS
+  natural_foundation: Measured Engineering States
+  engineering_objective: Measure Engineering Improvement.
   engineering_statements:
   - Measured Engineering States identify Engineering Constraints.
   - Engineering Constraints direct Engineering Refinements.
+  - Engineering Refinements support Measured Engineering Improvement.
   repository_grammar:
   - Engineering Object specifies Engineering System.
   - Engineering System produces Measured Engineering States.
@@ -19,8 +20,8 @@ reading_point:
   - Engineering Constraints direct Engineering Refinements.
   - Engineering Refinements support Measured Engineering Improvement.
   - Measured Engineering Improvement informs Leading Specifications.
-  forward_context: Measured Engineering Improvement
-  status: developing
+  forward_context: Leading Specifications
+  status: complete
 engineering_object: Microcalorimeter
 engineering_direction: Toward next-generation microcalorimeters.
 footer: Admissible generalizations trail leading specifications.
@@ -42,4 +43,13 @@ dialogue:
   - Measured Engineering States
   - Leading Specification
   engineering_statement: Engineering Constraints direct Engineering Refinements.
+  status: admitted
+- order: C
+  concept: Measured Engineering Improvement
+  first_label: Engineering Refinements
+  second_label: Measured Engineering Improvement
+  supporting_context:
+  - Engineering Constraints
+  - Leading Specification
+  engineering_statement: Engineering Refinements support Measured Engineering Improvement.
   status: candidate
