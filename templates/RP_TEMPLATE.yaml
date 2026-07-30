@@ -1,24 +1,16 @@
 identity:
-  notebook_id: "NB_17_C_ENGINEERING_REPORTS"
-  reading_point: "RP_17"
-  stage: "C"
-  version: "1.1.0"
+  notebook_id: "NB_19_A_REPOSITORY_CONTRIBUTIONS"
+  reading_point: "RP_19"
+  version: "1.0.0"
   status: "candidate"
 
 reading_point:
-  inherited_from: "NB_17_B_ENGINEERING_RECORDS"
-  natural_foundation: "Engineering Records"
-  engineering_objective: "Support Engineering Reports."
-
+  inherited_from: "RP_17_C_ENGINEERING_REPORTS"
   engineering_statements:
-    - "Engineering Understanding guides Engineering Sessions."
-    - "Engineering Sessions produce Engineering Records."
-    - "Engineering Records support Engineering Reports."
-
+    - "Engineering Reports support Repository Contributions."
   repository_grammar:
     - "Engineering Object specifies Engineering System."
     - "Engineering System produces Measured Engineering States."
-    - "Measurement records Measured Engineering States."
     - "Measured Engineering States identify Engineering Constraints."
     - "Engineering Constraints direct Engineering Refinements."
     - "Engineering Refinements support Measured Engineering Improvement."
@@ -28,41 +20,19 @@ reading_point:
     - "Engineering Understanding guides Engineering Sessions."
     - "Engineering Sessions produce Engineering Records."
     - "Engineering Records support Engineering Reports."
+    - "Engineering Reports support Repository Contributions."
+    - "Repository Contributions support Repository Development."
+    - "Repository Development supports Continued Specification."
+  forward_context: "Repository Development"
 
-  forward_context: "Repository Contributions"
-  status: "complete"
+dialogue:
+  first_label: "Engineering Reports"
+  second_label: "Repository Contributions"
+  supporting_context:
+    - "Leading Specifications"
+    - "Engineering Records"
 
 engineering_object: "Microcalorimeter"
 engineering_direction: "Toward next-generation microcalorimeters."
+
 footer: "Admissible generalizations trail leading specifications."
-
-dialogue:
-  - order: "A"
-    concept: "Engineering Sessions"
-    first_label: "Engineering Understanding"
-    second_label: "Engineering Sessions"
-    supporting_context:
-      - "Admissible Generalizations"
-      - "Engineering Questions"
-    engineering_statement: "Engineering Understanding guides Engineering Sessions."
-    status: "admitted"
-
-  - order: "B"
-    concept: "Engineering Records"
-    first_label: "Engineering Sessions"
-    second_label: "Engineering Records"
-    supporting_context:
-      - "Engineering Understanding"
-      - "Engineering Reports"
-    engineering_statement: "Engineering Sessions produce Engineering Records."
-    status: "admitted"
-
-  - order: "C"
-    concept: "Engineering Reports"
-    first_label: "Engineering Records"
-    second_label: "Engineering Reports"
-    supporting_context:
-      - "Engineering Sessions"
-      - "Repository Contributions"
-    engineering_statement: "Engineering Records support Engineering Reports."
-    status: "candidate"
