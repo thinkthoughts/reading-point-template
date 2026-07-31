@@ -1,19 +1,28 @@
-"""Public package interface for sensors-becker."""
+"""Public package interface for sensors_becker."""
 
-from .dialogue_renderer import (
-    DialogueFigure,
-    DialogueNode,
-    DialogueRelation,
-    NotebookDialogueRenderer,
-    render_dialogue,
-)
 from .runtime import initialize_notebook
 
+from .dialogue_specification import (
+    DialogueNode,
+    DialogueRelation,
+    DialogueSpecification,
+)
+
+from .dialogue_renderer import (
+    DialogueRenderer,
+    render_dialogue,
+)
+
+from .dialogue_loader import (
+    load_dialogue,
+)
+
 __all__ = [
-    "DialogueFigure",
+    "initialize_notebook",
     "DialogueNode",
     "DialogueRelation",
-    "NotebookDialogueRenderer",
-    "initialize_notebook",
+    "DialogueSpecification",
+    "DialogueRenderer",
     "render_dialogue",
+    "load_dialogue",
 ]
