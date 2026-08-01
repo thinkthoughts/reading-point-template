@@ -1,0 +1,43 @@
+identity:
+  notebook_id: "NB_XX_A_TEMPLATE"
+  stage: "A"
+  reading_point: "RP_XX"
+  version: "1.0.0"
+  status: "template"
+
+reading_point:
+  inherited_from: null
+
+  engineering_statements:
+    - "First Label supports Second Label."
+
+  repository_grammar:
+    - "Engineering Object specifies Engineering System."
+    - "Engineering System produces Measured Engineering States."
+    - "Measured Engineering States identify Engineering Constraints."
+    - "Engineering Constraints direct Engineering Refinements."
+    - "Engineering Refinements support Measured Engineering Improvement."
+    - "Measured Engineering Improvement informs Leading Specifications."
+    - "Leading Specifications constrain Admissible Generalizations."
+    - "Admissible Generalizations support Engineering Understanding."
+    - "Engineering Understanding guides Engineering Sessions."
+    - "Engineering Sessions produce Engineering Records."
+    - "Engineering Records support Engineering Reports."
+    - "Engineering Reports support Repository Contributions."
+    - "Repository Contributions support Repository Development."
+    - "Repository Development supports Continued Specification."
+
+  forward_context: "Next Reading Point"
+
+dialogue:
+  first_label: "First Label"
+  second_label: "Second Label"
+
+  supporting_context:
+    - "Supporting Context A"
+    - "Supporting Context B"
+
+engineering_object: "Engineering Object"
+engineering_direction: "Toward continued engineering development."
+
+footer: "Admissible generalizations trail leading specifications."
