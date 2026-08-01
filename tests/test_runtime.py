@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from sensors_becker.runtime import initialize_notebook
+from reading_point.runtime import initialize_notebook
 
 
 def test_initialize_notebook(tmp_path) -> None:

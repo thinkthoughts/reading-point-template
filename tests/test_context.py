@@ -6,10 +6,10 @@ import json
 
 import yaml
 
-from sensors_becker.context import RepositoryContext, default_context
-from sensors_becker.export import export_context_bundle
-from sensors_becker.figures import export_default_figures
-from sensors_becker.validation import (
+from reading_point.context import RepositoryContext, default_context
+from reading_point.export import export_context_bundle
+from reading_point.figures import export_default_figures
+from reading_point.validation import (
     ContextValidationError,
     validate_context,
 )

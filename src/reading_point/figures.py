@@ -8,9 +8,9 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 
-from sensors_becker.context import RepositoryContext
-from sensors_becker.paths import FIGURES_DIR
-from sensors_becker.validation import validate_context
+from reading_point.context import RepositoryContext
+from reading_point.paths import FIGURES_DIR
+from reading_point.validation import validate_context
 
 
 def ensure_figure_directory(directory: Path = FIGURES_DIR) -> Path:

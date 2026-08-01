@@ -8,9 +8,9 @@ from typing import Any
 
 import yaml
 
-from sensors_becker.context import RepositoryContext
-from sensors_becker.paths import EXPORTS_DIR
-from sensors_becker.validation import validate_context
+from reading_point.context import RepositoryContext
+from reading_point.paths import EXPORTS_DIR
+from reading_point.validation import validate_context
 
 
 def ensure_parent_directory(path: Path) -> Path:

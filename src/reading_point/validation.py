@@ -6,7 +6,7 @@ from collections.abc import Iterable
 from dataclasses import fields
 from typing import Final
 
-from sensors_becker.context import RepositoryContext
+from reading_point.context import RepositoryContext
 
 
 class ContextValidationError(ValueError):

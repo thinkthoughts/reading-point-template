@@ -3,7 +3,7 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sensors-becker"
+name = "reading-point-template"
 version = "0.1.0"
 description = "Leading specifications for cryogenic quantum-sensor development in preparation for collaboration with Daniel Becker."
 readme = "README.md"
