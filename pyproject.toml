@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "reading-point-template"
 version = "0.1.0"
-description = "Leading specifications for cryogenic quantum-sensor development in preparation for collaboration with Daniel Becker."
+description = "Reusable Reading Point templates for engineering repositories."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -17,15 +17,8 @@ authors = [
 dependencies = [
   "ipykernel",
   "jupyter",
-  "jsonschema",
   "matplotlib",
-  "networkx",
-  "numpy",
-  "pandas",
-  "pydantic",
-  "pyyaml",
-  "tabulate",
-  "tqdm"
+  "pyyaml"
 ]
 
 [project.optional-dependencies]
