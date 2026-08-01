@@ -1,0 +1,31 @@
+identity:
+  statement_id: "ES_0000"
+  version: "1.0.0"
+  status: "template"
+
+repository:
+  name: "repository-name"
+  description: "Repository description."
+
+engineering_statement:
+  title: "Engineering Statement"
+  summary: >
+    Briefly describe the engineering intent of this repository.
+
+engineering_object:
+  name: "Engineering Object"
+  direction: "Toward continued engineering development."
+
+leading_specifications:
+  - "Leading specifications constrain admissible generalizations."
+
+reading_points:
+  - "RP_01"
+
+artifacts:
+  notebooks:
+    - "NB_TEMPLATE.ipynb"
+  specifications:
+    - "RP_TEMPLATE.yaml"
+
+footer: "Admissible generalizations trail leading specifications."
